@@ -1,0 +1,33 @@
+body {
+	background-color: #eee;
+	color: #000;
+}
+
+.navbar-dark {
+	color: #fff !important;
+	background-color: #373737;
+	border-radius: 0px !important;
+	box-sizing: border-box;
+}
+
+.navbar-dark .navbar-brand {
+	color: #fff !important;
+}
+
+.navbar-dark .navbar-nav li a {
+	color: #E1E1E1;
+	transition: 0.2s;
+}
+
+.navbar-dark .navbar-nav li a:hover {
+	background-color: #222;
+	color: #fff;
+}
+
+.navbar-dark .navbar-nav li.active a {
+	background-color: #222;
+}
+
+.navbar-dark .icon-bar{
+	background-color: #FFF !important;
+}

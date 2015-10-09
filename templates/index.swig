@@ -4,5 +4,5 @@
 {% endblock %}
 
 {% block content %}
- <p>Hello World!</p>
+<p>index</p>
 {% endblock %}
