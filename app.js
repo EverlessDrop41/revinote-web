@@ -5,12 +5,12 @@ var swig = require('swig');
 var Firebase = require("firebase");
 var app = express();
 
-//FOR DEBUGGING
+//FOR DEBUGGING - View Cache
 app.set('view cache', false);
 swig.setDefaults({ cache: false });
 
+//Enabling and configure Swig templating
 app.engine('swig', swig.renderFile);
-
 app.set('view engine', 'swig');
 app.set('views', __dirname + '/templates');
 
