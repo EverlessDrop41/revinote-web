@@ -27,9 +27,11 @@ app.use(body_parser.urlencoded({
 //Check for domain from command line
 var domain = "localhost";
 process.argv.forEach(function (val, index, array) {
-  if (index.toLowerCase() == 'domain') {
-  	domain = val;
-  }
+	try {
+		if (index.toLowerCase() == 'domain') {
+	  	domain = val;
+	  }
+	} catch (e) {}
 });
 
 //Log all requests
@@ -38,9 +40,7 @@ app.use(function (request, res, next) {
 	next();
 });
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+require('./routes/index.js')(app);
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
