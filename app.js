@@ -4,6 +4,9 @@ var body_parser = require('body-parser');
 var swig = require('swig');
 var Firebase = require("firebase");
 var app = express();
+var cookieSession = require('cookie-session');
+
+app.set('trust proxy', 1) ;// trust first proxy
 
 //FOR DEBUGGING - View Cache
 app.set('view cache', false);
@@ -13,6 +16,12 @@ swig.setDefaults({ cache: false });
 app.engine('swig', swig.renderFile);
 app.set('view engine', 'swig');
 app.set('views', __dirname + '/templates');
+
+//Enable session cookies
+app.use(cookieSession({
+  name: 'session',
+  keys: ['key1', 'key2']
+}));
 
 app.use(express.static('public'));
 
