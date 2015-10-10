@@ -39,7 +39,7 @@
 		      	{% if user %}
 		      		<li><a href="#">Signed in as {{ user.name|default('[ERROR NO USERNAME]') }}</a></li>
 		      	{% else %}
-			        <li><a href="#">Sign in</a></li>
+			        <li><a href="/login">Sign in</a></li>
 			        <li><a href="#">Sign up</a></li>
 		        {% endif %}
 		      </ul>

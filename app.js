@@ -17,7 +17,8 @@ app.set('views', __dirname + '/templates');
 app.use(express.static('public'));
 
 //Put firebase into app locals
-var myFirebaseRef = new Firebase('https://revinote.firebaseio.com/');
+var fireref = new Firebase('https://revinote.firebaseio.com/');
+app.locals.fireref = fireref;
 
 //Refactor requests
 app.use(body_parser.urlencoded({
@@ -41,6 +42,8 @@ app.use(function (request, res, next) {
 });
 
 require('./routes/index.js')(app);
+require('./routes/login.js')(app);
+
 
 var server = app.listen(3000, function () {
   var host = server.address().address;
