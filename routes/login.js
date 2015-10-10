@@ -11,15 +11,14 @@ module.exports = function (app) {
 		  password : req.body.password,
 		}, function(error, authData) {
 		  if (error) {
-		    console.log("Login Failed!", error);
+		    res.render('login', {signup: false});
 		  } else {
-		    console.log("Authenticated successfully with payload:", authData);
 		    req.sesssion.uid = authData.uid;
 		    req.sesssion.token = authData.token;
 		    req.sesssion.email = req.body.email;
+		    res.redirect('/');
 		  }
 		}, { remember: 'none'});
-		res.render('login', {signup: false});
 	});
 
 	app.get('/sign_up', function (req, res) {
@@ -29,6 +28,15 @@ module.exports = function (app) {
 	app.post('/sign_up', function (req, res) {
 		console.log(req.body.email);
 		console.log(req.body.password);
-		res.redirect('login');
+		app.locals.fireref.createUser({
+		  email    : req.body.email,
+		  password : req.body.password
+		}, function(error, userData) {
+		  if (error) {
+		    res.redirect('sign_up');
+		  } else {
+		    res.redirect('login');
+		  }
+		});
 	});
 };
