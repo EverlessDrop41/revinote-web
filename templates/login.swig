@@ -1,7 +1,7 @@
 {% extends "layout.swig" %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
 	<div class="row">
 		<div class="col-xs-1"></div>
 		<div class="panel panel-default col-xs-10">

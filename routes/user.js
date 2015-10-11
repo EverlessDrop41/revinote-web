@@ -44,7 +44,7 @@ module.exports = function (app) {
 	});
 
 	app.get('/user_settings', must_be_logged_in, function (req, res) {
-		res.end('Not yet implememnted');
+		res.render('user_settings', {user: req.session.user})
 	});
 };
 
