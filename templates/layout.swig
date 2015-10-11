@@ -37,7 +37,8 @@
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
 		      	{% if user %}
-		      		<li><a href="#">Signed in as {{ user.name|default('[ERROR NO USERNAME]') }}</a></li>
+		      		<li><a href="#">Signed in as {{ user.email|default('[ERROR NO USERNAME]') }}</a></li>
+		      		<li><a href="/logout">Logout</a></li>
 		      	{% else %}
 			        <li><a href="/login">Sign in</a></li>
 			        <li><a href="/sign_up">Sign up</a></li>

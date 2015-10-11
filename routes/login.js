@@ -1,5 +1,8 @@
 module.exports = function (app) {
 	app.get('/login', function (req, res) {
+		if (req.session.user) {
+			res.redirect('/');
+		}
 		res.render('login', {signup: false});
 	});
 
@@ -13,15 +16,16 @@ module.exports = function (app) {
 		  if (error) {
 		    res.render('login', {signup: false});
 		  } else {
-		    req.sesssion.uid = authData.uid;
-		    req.sesssion.token = authData.token;
-		    req.sesssion.email = req.body.email;
+		  	req.session.user = { uid: authData.uid, token: authData.token , email: req.body.email }
 		    res.redirect('/');
 		  }
 		}, { remember: 'none'});
 	});
 
 	app.get('/sign_up', function (req, res) {
+		if (req.session.user) {
+			res.redirect('/');
+		}
 		res.render('login', {signup: true});
 	});
 
@@ -38,5 +42,10 @@ module.exports = function (app) {
 		    res.redirect('login');
 		  }
 		});
+	});
+
+	app.get('/logout', function (req, res) {
+		req.session.user = null;
+		res.redirect('/login');
 	});
 };
