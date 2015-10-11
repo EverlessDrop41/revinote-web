@@ -44,7 +44,10 @@ module.exports = function (app) {
 	});
 
 	app.get('/user_settings', must_be_logged_in, function (req, res) {
-		res.render('user_settings', {user: req.session.user})
+		var s = req.session.successes;
+		req.session.successes = null;
+		console.log(s);
+		res.render('user_settings', {user: req.session.user, successes: s});
 	});
 
 	app.post('/user_settings/change_password', must_be_logged_in, function (req, res) {
@@ -54,10 +57,11 @@ module.exports = function (app) {
 		  newPassword : req.body.new_pass
 		}, function(error) {
 		  if (error === null) {
+		  	req.session.successes ? req.session.successes.push("Successfully changed password") : req.session.successes = ["Successfully changed password"];
 		    res.redirect('/user_settings');
 		  } else {
 		    console.log("Error changing password:", error);
-		    res.redirect('/user_settings')
+		    res.redirect('/user_settings');
 		  }
 		});
 	});
