@@ -8,6 +8,51 @@
 		</div>
 	</div>
 
+	<!--User Info Block-->
+	<div class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+		    <h1 class="panel-title"><strong>User Information</strong></h1>
+		  </div>
+
+		  <div class="panel-body">
+		  	<dl>
+				  <dt>Email</dt>
+				  <dd>{{user.email}}</dd>
+				  <br>
+				  <dt>Uid</dt>
+				  <dd>{{user.uid}}</dd>
+				</dl>
+		  </div>
+		</div>
+	</div>
+
+	<!--Email Change Block-->
+	<div class="row">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+		    <h1 class="panel-title"><strong>Change Email</strong></h1>
+		  </div>
+
+		  <div class="panel-body">
+		    <form>
+		    	<div class="form-group">
+				    <label class="control-label">Old Email</label>
+				    <div>
+				      <p class="form-control-static">{{user.email}}</p>
+				    </div>
+				  </div>
+				  <div class="form-group">
+				    <label for="pass">New Email</label>
+				    <input type="email" class="form-control" id="new_email" placeholder="New Email" name="new_email" required>
+				  </div>
+
+				  <button type="submit" class="btn btn-primary btn-block">Change Email</button>
+				</form>
+		  </div>
+		</div>
+	</div>
+
 	<!--Pass Change Block-->
 	<div class="row">
 		<div class="panel panel-default">
@@ -36,30 +81,5 @@
 		</div>
 	</div>
 
-	<!--Pass Change Block-->
-	<div class="row">
-		<div class="panel panel-default">
-			<div class="panel-heading">
-		    <h1 class="panel-title"><strong>Change Email</strong></h1>
-		  </div>
-
-		  <div class="panel-body">
-		    <form>
-		    	<div class="form-group">
-				    <label class="control-label">Old Email</label>
-				    <div>
-				      <p class="form-control-static">{{user.email}}</p>
-				    </div>
-				  </div>
-				  <div class="form-group">
-				    <label for="pass">New Email</label>
-				    <input type="email" class="form-control" id="new_email" placeholder="New Email" name="new_email" required>
-				  </div>
-
-				  <button type="submit" class="btn btn-primary btn-block">Change Email</button>
-				</form>
-		  </div>
-		</div>
-	</div>
 </div>
 {% endblock %}
