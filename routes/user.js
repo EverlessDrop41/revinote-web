@@ -46,6 +46,21 @@ module.exports = function (app) {
 	app.get('/user_settings', must_be_logged_in, function (req, res) {
 		res.render('user_settings', {user: req.session.user})
 	});
+
+	app.post('/user_settings/change_password', must_be_logged_in, function (req, res) {
+		app.locals.fireref.changePassword({
+		  email       : req.session.user.email,
+		  oldPassword : req.body.old_pass,
+		  newPassword : req.body.new_pass
+		}, function(error) {
+		  if (error === null) {
+		    res.redirect('/user_settings');
+		  } else {
+		    console.log("Error changing password:", error);
+		    res.redirect('/user_settings')
+		  }
+		});
+	});
 };
 
 function must_be_logged_in(req, res, next) {

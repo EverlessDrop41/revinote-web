@@ -61,7 +61,7 @@
 		  </div>
 
 		  <div class="panel-body">
-		    <form>
+		    <form method="POST" action="/user_settings/change_password">
 		    	<div class="form-group">
 				    <label for="old_pass">Old Password</label>
 				    <input type="password" class="form-control" id="old_pass" placeholder="Password" name="old_pass" required>
