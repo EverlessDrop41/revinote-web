@@ -51,7 +51,7 @@ app.use(function (request, res, next) {
 });
 
 require('./routes/index.js')(app);
-require('./routes/login.js')(app);
+require('./routes/user.js')(app);
 
 
 var server = app.listen(3000, function () {

@@ -1,8 +1,5 @@
 module.exports = function (app) {
-	app.get('/login', function (req, res) {
-		if (req.session.user) {
-			res.redirect('/');
-		}
+	app.get('/login', must_not_be_logged_in,function (req, res) {
 		res.render('login', {signup: false});
 	});
 
@@ -22,11 +19,8 @@ module.exports = function (app) {
 		}, { remember: 'none'});
 	});
 
-	app.get('/sign_up', function (req, res) {
-		if (req.session.user) {
-			res.redirect('/');
-		}
-		res.render('login', {signup: true});
+	app.get('/sign_up', must_not_be_logged_in,function (req, res) {
+			res.render('login', {signup: true});
 	});
 
 	app.post('/sign_up', function (req, res) {
@@ -48,4 +42,24 @@ module.exports = function (app) {
 		req.session.user = null;
 		res.redirect('/login');
 	});
+
+	app.get('/user_settings', must_be_logged_in, function (req, res) {
+		res.end('Not yet implememnted');
+	});
 };
+
+function must_be_logged_in(req, res, next) {
+	if (req.session.user) {
+		next();
+	} else {
+		res.redirect('/');
+	}
+}
+
+function must_not_be_logged_in(req, res, next) {
+	if (!req.session.user) {
+		next();
+	} else {
+		res.redirect('/');
+	}
+}
