@@ -122,5 +122,28 @@
 		</div>
 	</div>
 
+	<div class="row">
+		<div class="panel panel-danger">
+			<div class="panel-heading">
+		    <h1 class="panel-title"><strong>Delete Account</strong></h1>
+		  </div>
+
+		  <div class="panel-body">
+		    <form method="POST" action="/user_settings/delete_user">
+					
+					<div class="alert alert-danger" role="alert">
+						<strong>Warning: </strong> This action is irreversible
+					</div>
+
+				  <div class="form-group">
+				    <label for="pass">Password:</label>
+				    <input type="password" class="form-control" id="new_pass" placeholder="Password" name="pass" required>
+				  </div>
+				  <button type="submit" class="btn btn-danger btn-block">Delete</button>
+				</form>
+		  </div>
+		</div>
+	</div>
+
 </div>
 {% endblock %}
