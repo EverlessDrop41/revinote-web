@@ -108,7 +108,7 @@
 				    <input type="password" class="form-control" id="old_pass" placeholder="Password" name="old_pass" required>
 				  </div>
 				  <div class="form-group">
-				    <label for="new_ass">New Password</label>
+				    <label for="new_pass">New Password</label>
 				    <input type="password" class="form-control" id="new_pass" placeholder="Password" name="new_pass" required>
 				  </div>
 				  <!--
