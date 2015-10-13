@@ -86,6 +86,22 @@ module.exports = function (app) {
 		  }
 		});
 	});
+
+	app.post('/user_settings/delete_user', must_be_logged_in, function (req, res) {
+		app.locals.fireref.removeUser({
+		  email    : req.session.user.email,
+		  password : req.body.pass
+		}, function(error) {
+		  if (error === null) {
+		  	req.user = null;
+		    res.redirect("/")
+		  } else {
+		    console.log("Error changing password: " , error.code);
+		    req.session.dangers ? req.session.dangers.push("Error deleting account: " + error.code) : req.session.dangers = ["Error deleting account: " + error.code];
+		    res.redirect('/user_settings');
+		  }
+		});
+	});
 };
 
 function must_be_logged_in(req, res, next) {
