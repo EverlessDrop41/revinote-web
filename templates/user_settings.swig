@@ -108,7 +108,7 @@
 				    <input type="password" class="form-control" id="old_pass" placeholder="Password" name="old_pass" required>
 				  </div>
 				  <div class="form-group">
-				    <label for="pass">New Password</label>
+				    <label for="new_ass">New Password</label>
 				    <input type="password" class="form-control" id="new_pass" placeholder="Password" name="new_pass" required>
 				  </div>
 				  <!--
@@ -136,8 +136,8 @@
 					</div>
 
 				  <div class="form-group">
-				    <label for="pass">Password:</label>
-				    <input type="password" class="form-control" id="new_pass" placeholder="Password" name="pass" required>
+				    <label for="del_pass">Password:</label>
+				    <input type="password" class="form-control" id="del_pass" placeholder="Password" name="pass" required>
 				  </div>
 				  <button type="submit" class="btn btn-danger btn-block">Delete</button>
 				</form>
