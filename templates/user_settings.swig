@@ -72,7 +72,7 @@
 		  </div>
 
 		  <div class="panel-body">
-		    <form>
+		    <form method="POST" action="/user_settings/change_email">
 		    	<div class="form-group">
 				    <label class="control-label">Old Email</label>
 				    <div>
@@ -84,6 +84,10 @@
 				    <input type="email" class="form-control" id="new_email" placeholder="New Email" name="new_email" required>
 				  </div>
 
+				  <div class="form-group">
+				    <label for="pass">Password</label>
+				    <input type="password" class="form-control" id="pass" placeholder="Password" name="pass" required>
+				  </div>
 				  <button type="submit" class="btn btn-primary btn-block">Change Email</button>
 				</form>
 		  </div>

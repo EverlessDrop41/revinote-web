@@ -50,6 +50,24 @@ module.exports = function (app) {
 		res.render('user_settings', {user: req.session.user, successes: s});
 	});
 
+	app.post('/user_settings/change_email', must_be_logged_in, function (req, res) {
+		app.locals.fireref.changeEmail({
+		  oldEmail : req.session.user.email,
+		  newEmail : req.body.new_email,
+		  password : req.body.pass
+		}, function(error) {
+		  if (error === null) {
+		  	req.session.user.email = req.body.new_email;
+		  	req.session.successes ? req.session.successes.push("Successfully changed email") : req.session.successes = ["Successfully changed email"];
+		    res.redirect('/user_settings');
+		  } else {
+		    console.log("Error changing email:", error);
+		    req.session.dangers ? req.session.dangers.push("Error changing email") : req.session.dangers = ["Error changing email"];
+		    res.redirect('/user_settings');
+		  }
+		});
+	});
+
 	app.post('/user_settings/change_password', must_be_logged_in, function (req, res) {
 		app.locals.fireref.changePassword({
 		  email       : req.session.user.email,
