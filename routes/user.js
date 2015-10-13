@@ -45,9 +45,11 @@ module.exports = function (app) {
 
 	app.get('/user_settings', must_be_logged_in, function (req, res) {
 		var s = req.session.successes;
+		var d = req.session.dangers;
 		req.session.successes = null;
+		req.session.dangers = null;
 		console.log(s);
-		res.render('user_settings', {user: req.session.user, successes: s});
+		res.render('user_settings', {user: req.session.user, successes: s, dangers: d});
 	});
 
 	app.post('/user_settings/change_email', must_be_logged_in, function (req, res) {
@@ -61,8 +63,8 @@ module.exports = function (app) {
 		  	req.session.successes ? req.session.successes.push("Successfully changed email") : req.session.successes = ["Successfully changed email"];
 		    res.redirect('/user_settings');
 		  } else {
-		    console.log("Error changing email:", error);
-		    req.session.dangers ? req.session.dangers.push("Error changing email") : req.session.dangers = ["Error changing email"];
+		    console.log(error.code);
+		    req.session.dangers ? req.session.dangers.push("Error changing email " + error.code) : req.session.dangers = ["Error changing email " + error.code];
 		    res.redirect('/user_settings');
 		  }
 		});
@@ -78,7 +80,8 @@ module.exports = function (app) {
 		  	req.session.successes ? req.session.successes.push("Successfully changed password") : req.session.successes = ["Successfully changed password"];
 		    res.redirect('/user_settings');
 		  } else {
-		    console.log("Error changing password:", error);
+		    console.log("Error changing password: " , error.code);
+		    req.session.dangers ? req.session.dangers.push("Error changing password: " + error.code) : req.session.dangers = ["Error changing password: " + error.code];
 		    res.redirect('/user_settings');
 		  }
 		});
