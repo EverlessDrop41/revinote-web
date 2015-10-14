@@ -17,7 +17,22 @@
 				    <label for="exampleInputPassword1">Password</label>
 				    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
 				  </div>
-				  <button type="submit" class="btn btn-default">Submit</button>
+
+					<div class="btn-group btn-group-justified" role="group" aria-label="...">
+					  <div class="btn-group" role="group">
+					    <button type="submit" class="btn btn-primary">Submit</button>
+					  </div>
+					  <div class="btn-group" role="group">
+					  	<a type="button" href="/sign_up" class="btn btn-info">
+					    	Sign up
+					    </a>
+					  </div>
+					  <div class="btn-group" role="group">
+					    <a type="button" href="/reset_password" class="btn btn-warning">
+					    	Forgotten Password?
+					    </a>
+					  </div>
+					</div>
 				</form>
 		  </div>
 		</div>
