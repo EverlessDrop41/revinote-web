@@ -11,7 +11,13 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		
+		<!--Firebase Libary-->
+		<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+		<script>var FireRef = new Firebase("https://revinote.firebaseio.com/");</script>
 
+		<!--jQuery CDN-->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 		{% block head %} {% endblock %}
 	</head>

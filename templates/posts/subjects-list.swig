@@ -29,7 +29,7 @@
 		<div class="page-header">
 		  <h1>Veiwing list of subjects</h1>
 		</div>
-		<div class="list-group">
+		<div class="list-group" id="SubjectList">
 		  <a href="#" class="list-group-item">
 		    <h4 class="list-group-item-heading">English</h4>
 		    <p class="list-group-item-text">Words n stuff</p>
@@ -47,4 +47,6 @@
 		</div>
 	</div>
 </div>
+
+<script src="/js/subjects-page.js"></script>
 {% endblock %}
