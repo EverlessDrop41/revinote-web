@@ -106,6 +106,18 @@ module.exports = function (app) {
 	app.get('/reset_password', function (req, res) {
 		res.render('reset_password');
 	});
+
+	app.post('/reset_password', function (req, res) {
+		app.locals.fireref.resetPassword({
+		  email : req.body.email
+		}, function(error) {
+		  if (error === null) {
+		    res.render('reset_password', { successes: ["Successfully sent password rest email to: " + req.body.email]});
+		  } else {
+		    res.render('reset_password', { dangers: ["Didn't successfully send password rest email to: " + req.body.email + ". Error: " + error.code], autoescape: false});
+		  }
+		});
+	});
 };
 
 function must_be_logged_in(req, res, next) {
