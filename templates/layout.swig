@@ -38,6 +38,7 @@
 		      <ul class="nav navbar-nav navbar-right">
 		      	{% if user %}
 		      		<li><a href="/user_settings">Signed in as {{ user.email|default('[ERROR NO USERNAME]') }}</a></li>
+		      		<li><a href="/user_settings"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a></li>
 		      		<li><a href="/logout">Logout</a></li>
 		      	{% else %}
 			        <li><a href="/login">Sign in</a></li>
