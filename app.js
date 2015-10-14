@@ -44,11 +44,6 @@ process.argv.forEach(function (val, index, array) {
 	} catch (e) {}
 });
 
-//Redirect static file from subdomain
-app.get('/:subdomain/:type/:file', function (req, res) {
-	res.redirect('/' + req.params.type + '/' + req.params.file);
-});
-
 //Log all requests
 app.use(function (request, res, next) {
 	console.log(request.method + request.url);
