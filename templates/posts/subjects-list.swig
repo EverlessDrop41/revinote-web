@@ -21,7 +21,7 @@
 				    <label for="description">Description</label>
 				    <input type="text" class="form-control" name="description" id="description" placeholder="Words 'n stuff">
 				  </div>
-				  <button type="submit" class="btn btn-default">Add Subject</button>
+				  <button type="button" class="btn btn-default" id="AddSubject">Add Subject</button>
 				</form>
 			</div>
 		</div>

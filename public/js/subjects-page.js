@@ -2,11 +2,15 @@
 jQuery(document).ready(function ($) {
 	subjList = $("#SubjectList");
 
+	nameBox = $("#name");
+	descriptionBox = $("#description");
+
 	if (uid && FireRef) {
 		userBase = FireRef.child(uid);
 		subjectBase = userBase.child("subjects");
 		
 		subjectBase.on("value", function(snap) {
+			subjList.html('');
 			snap.forEach(function (subjSnap) {
 				data = subjSnap.val();
 				subject = new Subject(data.name, data.description);
@@ -20,6 +24,19 @@ jQuery(document).ready(function ($) {
 	} else {
 		console.error("Uid and/or FireRef not assigned");
 	}
+
+	$("#AddSubject").click(function() {
+		name = nameBox.val();
+		description = descriptionBox.val();
+
+		if (name && description) {
+			nameBox.val('');
+			descriptionBox.val('');
+
+			subj = new Subject(name, description);
+			subjectBase.push(subj.getData());
+		}
+	});
 });
 
 function Subject (name, description){
