@@ -44,6 +44,11 @@ process.argv.forEach(function (val, index, array) {
 	} catch (e) {}
 });
 
+//Redirect static file from subdomain
+app.get('/:subdomain/:type/:file', function (req, res) {
+	res.redirect('/' + req.params.type + '/' + req.params.file);
+});
+
 //Log all requests
 app.use(function (request, res, next) {
 	console.log(request.method + request.url);
@@ -52,6 +57,7 @@ app.use(function (request, res, next) {
 
 require('./routes/index.js')(app);
 require('./routes/user.js')(app);
+require('./routes/post-list.js')(app);
 
 
 var server = app.listen(3000, function () {

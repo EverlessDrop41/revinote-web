@@ -1,0 +1,21 @@
+module.exports = function (app) {
+	app.get('/posts/subjects', must_be_logged_in, function (req, res) {
+		res.render('posts/subjects-list.swig', { user: req.session.user });
+	});
+};
+
+function must_be_logged_in(req, res, next) {
+	if (req.session.user) {
+		next();
+	} else {
+		res.redirect('/');
+	}
+}
+
+function must_not_be_logged_in(req, res, next) {
+	if (!req.session.user) {
+		next();
+	} else {
+		res.redirect('/');
+	}
+}
