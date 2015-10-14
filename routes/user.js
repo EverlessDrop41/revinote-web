@@ -102,6 +102,10 @@ module.exports = function (app) {
 		  }
 		});
 	});
+
+	app.get('/reset_password', function (req, res) {
+		res.render('reset_password');
+	});
 };
 
 function must_be_logged_in(req, res, next) {
