@@ -18,7 +18,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="Content">Content</label>
-				    <input type="text" class="form-control" name="Note" id="Content" placeholder="Words 'n stuff">
+				    <textarea type="text" class="form-control" name="Note" id="Content" placeholder="Words 'n stuff"></textarea>
 				  </div>
 				  <button type="button" class="btn btn-default" id="AddNote">Add Subject</button>
 				</form>
