@@ -45,7 +45,7 @@ function Subject (name, description){
 	this.name = name;
 	this.description = description;
 	this.getUrl = function () {
-		return "/posts/subjects/" + name;
+		return "/subjects/" + name;
 	}
 	this.getData = function () {
 		return {name: name, description: description};
