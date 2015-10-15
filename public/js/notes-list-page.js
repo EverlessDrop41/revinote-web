@@ -53,6 +53,9 @@ function Note (title, content, subject){
 	}
 	this.generateHtml = function () {
 		return '<a href="' + this.getUrl() + '" class="list-group-item"><h4 class="list-group-item-heading">' +
-						this.title + '</h4> <p class="list-group-item-text">' + this.content + '</p> </a>';
+						this.title + '</h4> <p class="list-group-item-text">' + this.getSnippet() + '</p> </a>';
+	}
+	this.getSnippet = function () {
+		return this.content.split('. ')[0];
 	}
 }
