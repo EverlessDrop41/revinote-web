@@ -29,8 +29,22 @@
 		<div class="page-header">
 		  <h1>Veiwing list of subjects</h1>
 		</div>
+
+		<div class="panel" id="list-loading" data-backdrop="static" data-keyboard="false">
+      <div class="panel-header">
+         <h1>Loading...</h1>
+      </div>
+      <div class="panel-body">
+        <div class="progress">
+				  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+				  </div>
+				</div>
+      </div>
+    </div>
+
 		<div class="list-group" id="SubjectList">
 		  {# Subject List #}
+		  
 		</div>
 	</div>
 </div>

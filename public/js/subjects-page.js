@@ -11,11 +11,13 @@ jQuery(document).ready(function ($) {
 		
 		subjectBase.on("value", function(snap) {
 			subjList.html('');
+			$("#list-loading").show();
 			snap.forEach(function (subjSnap) {
 				data = subjSnap.val();
 				subject = new Subject(data.name, data.description);
 				subjList.append(subject.generateHtml());
 			});
+			$("#list-loading").hide();
 		}, function (err) {
 			console.error(err.code);
 		});
