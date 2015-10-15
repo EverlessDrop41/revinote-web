@@ -52,6 +52,7 @@ app.use(function (request, res, next) {
 
 require('./routes/index.js')(app);
 require('./routes/user.js')(app);
+require('./routes/notes.js')(app);
 require('./routes/post-list.js')(app);
 
 
