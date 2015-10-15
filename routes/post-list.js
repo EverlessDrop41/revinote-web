@@ -1,5 +1,5 @@
 module.exports = function (app) {
-	app.get('/posts/subjects', must_be_logged_in, function (req, res) {
+	app.get('/subjects', must_be_logged_in, function (req, res) {
 		res.render('posts/subjects-list.swig', { user: req.session.user });
 	});
 };

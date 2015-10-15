@@ -39,7 +39,7 @@
 		    <div class="collapse navbar-collapse" id="navbar-contents">
 		      <ul class="nav navbar-nav">
 		        <li><a href="/">Home</a></li>
-		        <li><a href="/posts/subjects">About</a></li>
+		        <li><a href="/subjects">About</a></li>
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
 		      	{% if user %}
