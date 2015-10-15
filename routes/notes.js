@@ -1,6 +1,6 @@
 module.exports = function (app) {
 	app.get('/subjects/:subject', must_be_logged_in, function (req, res) {
-		res.render('posts/notes-list.swig', { user: req.session.user, subject: req.params.subject });
+		res.render('posts/notes-list.swig', { user: req.session.user, subject: req.params.subject.toLowerCase() });
 	});
 };
 
