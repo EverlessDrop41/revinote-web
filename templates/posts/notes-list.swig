@@ -13,12 +13,12 @@
 			<div class="panel-body">
 				<form class="form">
 				  <div class="form-group">
-				    <label for="name">Name</label>
-				    <input type="text" class="form-control" name="name" id="name" placeholder="English">
+				    <label for="title">Title</label>
+				    <input type="text" class="form-control" name="title" id="title" placeholder="English">
 				  </div>
 				  <div class="form-group">
-				    <label for="description">Note Content</label>
-				    <input type="text" class="form-control" name="Note" id="Note" placeholder="Words 'n stuff">
+				    <label for="Content">Content</label>
+				    <input type="text" class="form-control" name="Note" id="Content" placeholder="Words 'n stuff">
 				  </div>
 				  <button type="button" class="btn btn-default" id="AddSubject">Add Subject</button>
 				</form>
