@@ -48,5 +48,6 @@
 	</div>
 </div>
 
+<script src="/js/note.js"></script>
 <script src="/js/notes-list-page.js"></script>
 {% endblock %}
