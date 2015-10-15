@@ -16,6 +16,7 @@ jQuery(document).ready(function ($) {
 			snap.forEach(function (notesSnap) {
 				data = notesSnap.val();
 				note = new Note(data.title, data.content, subject);
+				note.setKey(notesSnap.key());
 				noteList.append(note.generateHtml());
 			});
 			$("#list-loading").hide();
@@ -45,8 +46,9 @@ function Note (title, content, subject){
 	this.title = title;
 	this.content = content;
 	this.subject = subject;
+	this.key;
 	this.getUrl = function () {
-		return "/subjects/" + this.subject + "/" + this.title;
+		return "/subjects/" + this.subject + "/" + this.key;
 	}
 	this.getData = function () {
 		return {title: title, content: content, subject: this.subject};
@@ -57,5 +59,11 @@ function Note (title, content, subject){
 	}
 	this.getSnippet = function () {
 		return this.content.split('. ')[0];
+	}
+	this.setKey = function (val) {
+		this.key = val;
+	}
+	this.getKey = function() {
+		return key;
 	}
 }
