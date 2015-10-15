@@ -14,13 +14,13 @@
 				<form class="form">
 				  <div class="form-group">
 				    <label for="Title">Title</label>
-				    <input type="text" class="form-control" name="Title" id="Title" placeholder="English">
+				    <input type="text" class="form-control" name="Title" id="Title" placeholder="Note Title">
 				  </div>
 				  <div class="form-group">
 				    <label for="Content">Content</label>
-				    <textarea type="text" class="form-control" name="Note" id="Content" placeholder="Words 'n stuff"></textarea>
+				    <textarea type="text" class="form-control" name="Note" id="Content" placeholder="Note Content"></textarea>
 				  </div>
-				  <button type="button" class="btn btn-default" id="AddNote">Add Subject</button>
+				  <button type="button" class="btn btn-default" id="AddNote">Add Note</button>
 				</form>
 			</div>
 		</div>
