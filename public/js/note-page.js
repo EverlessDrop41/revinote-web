@@ -8,6 +8,7 @@ jQuery(document).ready(function ($) {
 
 	if (hasRequiredData && FireRef) {
 		var converter = new Markdown.Converter();
+		Markdown.Extra.init(converter);
 		TitleBox.hide();
 		ContentBox.hide();
 
