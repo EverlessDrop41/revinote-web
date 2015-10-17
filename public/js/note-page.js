@@ -30,10 +30,16 @@ jQuery(document).ready(function ($) {
 			TitleBox.show();
 			ContentBox.show();
 
+			//MathJax
 			var script = document.createElement("script");
 		  script.type = "text/javascript";
 		  script.src  = "http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
 		  document.getElementsByTagName("head")[0].appendChild(script);
+
+		  //Highlight.js
+		  $('pre code').each(function(i, block) {
+		    hljs.highlightBlock(block);
+		  });
 		}, function (err) {
 			console.error(err.code);
 		});

@@ -24,6 +24,10 @@
 		<script type="text/javascript" src="/js/Markdown.Converter.js"></script>
 		<script type="text/javascript" src="/js/Markdown.Extra.min.js"></script>
 
+		{# HighlightJs #}
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/github.min.css">
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+
 		{% if md-editor %}<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Editor.min.js"></script>{% endif %}
 
 		{% block head %} {% endblock %}
