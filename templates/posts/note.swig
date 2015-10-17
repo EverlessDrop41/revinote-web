@@ -10,9 +10,13 @@
 
 <div class="container">
 	<div class="row">
+		<button type="button" class="btn btn-default btn-block" id="EditToggle">Toggle Editor Visibilty</button>
+
+		<br />
+
 		<div class="panel panel-default" id="NoteEditor">
 			<div class="panel-heading">
-		    <h1 class="panel-title"><strong>Edit Note</strong></h1>
+		    <h1 class="panel-title"><strong> <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> &nbsp; Edit Note</strong></h1>
 		  </div>
 
 			<div class="panel-body">

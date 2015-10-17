@@ -10,7 +10,10 @@ jQuery(document).ready(function ($) {
 	EditContent = $("#EditContent");
 	EditNoteBtn = $("#EditNoteSubmit");
 
+	EditToggle = $("#EditToggle");
+
 	if (hasRequiredData && FireRef) {
+		NoteEditor.hide();
 		var converter = new Markdown.Converter();
 		Markdown.Extra.init(converter);
 		TitleBox.hide();
@@ -54,6 +57,10 @@ jQuery(document).ready(function ($) {
 		}, function (err) {
 			console.error(err.code);
 		});
+
+		EditToggle.click(function () {
+			NoteEditor.slideToggle();
+		})
 
 		EditNoteBtn.click(function () {
 			var n = new Note(EditTitle.val(), EditContent.val(), subject);
