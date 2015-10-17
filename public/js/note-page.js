@@ -11,6 +11,7 @@ jQuery(document).ready(function ($) {
 	EditNoteBtn = $("#EditNoteSubmit");
 
 	EditToggle = $("#EditToggle");
+	DeleteNoteBtn = $("#DeleteNoteBtn");
 
 	if (hasRequiredData && FireRef) {
 		NoteEditor.hide();
@@ -56,6 +57,11 @@ jQuery(document).ready(function ($) {
 		  emojify.run();
 		}, function (err) {
 			console.error(err.code);
+		});
+
+		DeleteNoteBtn.click(function () {
+			note.remove();
+			window.location = "/subjects/" + subject;
 		});
 
 		EditToggle.click(function () {
