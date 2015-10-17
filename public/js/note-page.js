@@ -7,6 +7,7 @@ jQuery(document).ready(function ($) {
 	LoadingBox = $("#loading");
 
 	if (hasRequiredData && FireRef) {
+		var converter = new Markdown.Converter();
 		TitleBox.hide();
 		ContentBox.hide();
 
@@ -22,7 +23,7 @@ jQuery(document).ready(function ($) {
 
 			var data = snap.val();
 			TitleBox.text(data.title);
-			ContentBox.html(data.content);
+			ContentBox.html(converter.makeHtml(data.content));
 
 			LoadingBox.hide();
 			TitleBox.show();

@@ -19,6 +19,11 @@
 		<!--jQuery CDN-->
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
+
+		{# Markdown Data #}
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Converter.min.js"></script>
+		{% if md-editor %}<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Editor.min.js"></script>{% endif %}
+
 		{% block head %} {% endblock %}
 	</head>
 
