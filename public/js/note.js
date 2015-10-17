@@ -14,7 +14,7 @@ function Note (title, content, subject){
 						this.title + '</h4> <p class="list-group-item-text">' + this.getSnippet() + '</p> </a>';
 	}
 	this.getSnippet = function () {
-		return this.content.split('. ')[0];
+		return this.content.split('\n')[0];
 	}
 	this.setKey = function (val) {
 		this.key = val;
