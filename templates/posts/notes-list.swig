@@ -5,7 +5,18 @@
 
 <div class="container">
 	<div class="row">
-		<div class="panel panel-default">
+		<div class="btn-group btn-group-justified" role="group" aria-label="...">
+		  <div class="btn-group" role="group">
+		    <button type="button" class="btn btn-info" id="AddNoteToggle">Add Note</button>
+		  </div>
+		  <div class="btn-group" role="group">
+		    <button type="button" class="btn btn-danger" id="DeleteNoteBtn">Delete Subject</button>
+		  </div>
+		</div>
+
+		<br />
+
+		<div class="panel panel-default" id="AddNotePanel">
 			<div class="panel-heading">
 		    <h1 class="panel-title"><strong>Add note</strong></h1>
 		  </div>

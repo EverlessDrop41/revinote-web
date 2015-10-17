@@ -5,6 +5,10 @@ jQuery(document).ready(function ($) {
 	TitleBox = $("#Title");
 	ContentBox = $("#Content");
 
+	AddNotePanel = $("#AddNotePanel");
+	AddNoteToggle = $("#AddNoteToggle");
+	DeleteNoteBtn = $("#DeleteNoteBtn");
+
 	if (hasRequiredData && FireRef) {
 		userBase = FireRef.child(uid);
 		notesBase = userBase.child("notes");
@@ -36,6 +40,28 @@ jQuery(document).ready(function ($) {
 				console.log(note);
 				subjectBase.push(note.getData());
 			}
+		});
+
+		AddNoteToggle.click(function () {
+			AddNotePanel.slideToggle();
+		});
+
+		DeleteNoteBtn.click(function() {
+			subjBase = userBase.child("subjects");
+			subjBase.on("value", function(snap) {
+				snap.forEach(function (subjSnap) {
+					data = subjSnap.val();
+					if (data.name.toLowerCase() == subject.toLowerCase()) {
+						subjectBase.remove();
+						var c = subjBase.child(subjSnap.key());
+						c.remove();
+						window.location = "/subjects";
+					}
+				});
+			}, function (err) {
+				console.error(err.code);
+			});
+
 		});
 	} else {
 		console.error("Uid and/or FireRef and/or Subject not assigned");
