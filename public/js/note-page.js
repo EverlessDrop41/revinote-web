@@ -42,7 +42,6 @@ jQuery(document).ready(function ($) {
 		  });
 
 		  //Emojify.js
-		  //http://hassankhan.me/emojify.js/images/emoji/smile.png
 		  emojify.setConfig({img_dir: 'http://hassankhan.me/emojify.js/images/emoji'});
 		  emojify.run();
 		}, function (err) {

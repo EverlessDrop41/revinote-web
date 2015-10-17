@@ -34,3 +34,12 @@ body {
 .navbar-dark .icon-bar{
 	background-color: #FFF !important;
 }
+
+pre {
+	padding: 0px;
+	border-width: 0px;
+}
+
+.hljs {
+	padding: 13px !important;
+}
