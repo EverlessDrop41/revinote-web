@@ -10,7 +10,7 @@
 
 <div class="container">
 	<div class="row">
-		{#<div class="panel panel-default">
+		<div class="panel panel-default" id="NoteEditor">
 			<div class="panel-heading">
 		    <h1 class="panel-title"><strong>Edit Note</strong></h1>
 		  </div>
@@ -25,10 +25,10 @@
 				    <label for="EdtContent">Content</label>
 				    <textarea type="text" class="form-control" name="EditContent" id="EditContent" placeholder="Note Content"></textarea>
 				  </div>
-				  <button type="button" class="btn btn-default" id="AddNote">Add Note</button>
+				  <button type="button" class="btn btn-default" id="EditNoteSubmit">Edit Note</button>
 				</form>
 			</div>
-		</div>#}
+		</div>
 
 		<div class="page-header">
 		  <h1 id="Title">Loading...</h1>

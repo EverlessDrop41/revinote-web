@@ -3,8 +3,12 @@ jQuery(document).ready(function ($) {
 	TitleBox = $("#Title");
 	ContentBox = $("#Content");
 
-
 	LoadingBox = $("#loading");
+
+	NoteEditor = $("#NoteEditor");
+	EditTitle = $("#EditTitle");
+	EditContent = $("#EditContent");
+	EditNoteBtn = $("#EditNoteSubmit");
 
 	if (hasRequiredData && FireRef) {
 		var converter = new Markdown.Converter();
@@ -26,6 +30,9 @@ jQuery(document).ready(function ($) {
 			TitleBox.text(data.title);
 			ContentBox.html(converter.makeHtml(data.content));
 
+			EditTitle.val(data.title);
+			EditContent.text(data.content);
+
 			LoadingBox.hide();
 			TitleBox.show();
 			ContentBox.show();
@@ -46,6 +53,11 @@ jQuery(document).ready(function ($) {
 		  emojify.run();
 		}, function (err) {
 			console.error(err.code);
+		});
+
+		EditNoteBtn.click(function () {
+			var n = new Note(EditTitle.val(), EditContent.val(), subject);
+			note.update(n.getData());
 		});
 	} else {
 		console.error("Uid and/or FireRef and/or Subject and/or Note Id not assigned");
