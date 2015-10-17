@@ -23,6 +23,7 @@
 		{# Markdown Data #}
 		<script type="text/javascript" src="/js/Markdown.Converter.js"></script>
 		<script type="text/javascript" src="/js/Markdown.Extra.min.js"></script>
+
 		{% if md-editor %}<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Editor.min.js"></script>{% endif %}
 
 		{% block head %} {% endblock %}
@@ -60,5 +61,7 @@
 		    </div><!-- /.navbar-collapse -->
 		</nav>
         {% block content %}{% endblock %}
+        {# MathJax #}
+	
 	</body>
 </html>
