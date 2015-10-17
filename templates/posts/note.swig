@@ -5,7 +5,7 @@
 	var uid = "{{ user.uid }}"; 
 	var subject = "{{ subject }}"; 
 	var noteId = "{{ noteId }}";
-	var hasRequiredData = (uid != "" && subject != "" && note != "") && (uid && subject && note);
+	var hasRequiredData = (uid != "" && subject != "" && noteId != "") && (uid && subject && noteId);
 </script>
 
 <div class="container">
@@ -31,10 +31,10 @@
 		</div>#}
 
 		<div class="page-header">
-		  <h1 id="Title">{{Title}}</h1>
+		  <h1 id="Title">Loading...</h1>
 		</div>
 
-		{#<div class="panel" id="list-loading" data-backdrop="static" data-keyboard="false">
+		<div class="panel" id="loading" data-backdrop="static" data-keyboard="false">
       <div class="panel-header">
          <h1>Loading...</h1>
       </div>
@@ -44,11 +44,10 @@
 				  </div>
 				</div>
       </div>
-    </div>#}
+    </div>
 
 		<p id="Content">
-		  {# Subject List #}
-		  {{Content}}
+		  Loading....
 		</p>
 	</div>
 </div>
