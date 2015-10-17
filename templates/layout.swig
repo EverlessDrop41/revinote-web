@@ -45,7 +45,7 @@
 		    <div class="collapse navbar-collapse" id="navbar-contents">
 		      <ul class="nav navbar-nav">
 		        <li><a href="/">Home</a></li>
-		        <li><a href="/subjects">About</a></li>
+		        {% if user %}<li><a href="/subjects">Subjects</a></li>{% endif %}
 		      </ul>
 		      <ul class="nav navbar-nav navbar-right">
 		      	{% if user %}
