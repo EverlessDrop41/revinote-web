@@ -23,13 +23,15 @@
 		{# Markdown Data #}
 		<script type="text/javascript" src="/js/Markdown.Converter.js"></script>
 		<script type="text/javascript" src="/js/Markdown.Extra.min.js"></script>
+		{% if md-editor %}<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Editor.min.js"></script>{% endif %}
 
 		{# HighlightJs #}
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/github.min.css">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
 
-		{% if md-editor %}<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Editor.min.js"></script>{% endif %}
-
+		{# Emojify #}
+		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.css" />
+		<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>
 		{% block head %} {% endblock %}
 	</head>
 

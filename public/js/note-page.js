@@ -40,6 +40,11 @@ jQuery(document).ready(function ($) {
 		  $('pre code').each(function(i, block) {
 		    hljs.highlightBlock(block);
 		  });
+
+		  //Emojify.js
+		  //http://hassankhan.me/emojify.js/images/emoji/smile.png
+		  emojify.setConfig({img_dir: 'http://hassankhan.me/emojify.js/images/emoji'});
+		  emojify.run();
 		}, function (err) {
 			console.error(err.code);
 		});
