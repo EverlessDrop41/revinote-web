@@ -10,7 +10,15 @@
 
 <div class="container">
 	<div class="row">
-		<button type="button" class="btn btn-default btn-block" id="EditToggle">Toggle Editor Visibilty</button>
+
+		<div class="btn-group btn-group-justified" role="group" aria-label="...">
+		  <div class="btn-group" role="group">
+		    <button type="button" class="btn btn-info" id="EditToggle">Edit Note</button>
+		  </div>
+		  <div class="btn-group" role="group">
+		    <button type="button" class="btn btn-danger" id="DeleteNoteBtn">Delete Note</button>
+		  </div>
+		</div>
 
 		<br />
 
