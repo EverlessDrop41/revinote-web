@@ -32,6 +32,9 @@
 		{# Emojify #}
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.css" />
 		<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>
+
+		{# MathJax #}
+		<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 		{% block head %} {% endblock %}
 	</head>
 
