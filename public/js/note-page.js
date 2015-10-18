@@ -55,6 +55,9 @@ jQuery(document).ready(function ($) {
 		  //Emojify.js
 		  emojify.setConfig({img_dir: 'http://hassankhan.me/emojify.js/images/emoji'});
 		  emojify.run();
+
+		  //Style Tables
+		  $("table").addClass("table");
 		}, function (err) {
 			console.error(err.code);
 		});
