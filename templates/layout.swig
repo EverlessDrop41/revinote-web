@@ -66,8 +66,16 @@
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		</nav>
-        {% block content %}{% endblock %}
-        {# MathJax #}
-	
-	</body>
+		{% if breadcrumb %}
+		<div class="container">
+			<div class="row">
+				<ol class="breadcrumb">
+				{% for item in breadcrumb %}
+				  <li {% if item.isActive %} class="active" {% endif %}><a href="{{item.url}}">{{item.name}}</a></li>
+				{% endfor %}
+				</ol>
+			</div>
+		</div>
+		{% endif %}
+    {% block content %}{% endblock %}	</body>
 </html>
