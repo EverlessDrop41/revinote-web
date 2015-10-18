@@ -21,6 +21,13 @@ module.exports = function (app) {
 			]
 		});
 	});
+
+	app.get('/post-help', function (req, res) {
+		res.render('post-help.swig', { user: req.session.user, breadcrumb: [
+				{ name: 'Home' , url: '/' },
+				{ name: "Post Help", isActive: true}
+			] });
+	});
 };
 
 function must_be_logged_in(req, res, next) {
