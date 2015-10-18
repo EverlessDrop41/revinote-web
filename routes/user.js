@@ -1,6 +1,9 @@
 module.exports = function (app) {
 	app.get('/login', must_not_be_logged_in,function (req, res) {
-		res.render('login', {signup: false});
+		res.render('login', {signup: false, breadcrumb: [
+				{ name: 'Home' , url: '/'},
+				{ name: 'Login', isActive: true}
+			] });
 	});
 
 	app.post('/login', function (req, res) {
@@ -20,7 +23,10 @@ module.exports = function (app) {
 	});
 
 	app.get('/sign_up', must_not_be_logged_in,function (req, res) {
-			res.render('login', {signup: true});
+			res.render('login', {signup: true, breadcrumb: [
+				{ name: 'Home' , url: '/'},
+				{ name: 'Sign Up', isActive: true}
+			] });
 	});
 
 	app.post('/sign_up', function (req, res) {
@@ -49,7 +55,10 @@ module.exports = function (app) {
 		req.session.successes = null;
 		req.session.dangers = null;
 		console.log(s);
-		res.render('user_settings', {user: req.session.user, successes: s, dangers: d});
+		res.render('user_settings', {user: req.session.user, successes: s, dangers: d, breadcrumb: [
+				{ name: 'Home' , url: '/'},
+				{ name: 'User Settings', isActive: true}
+			] });
 	});
 
 	app.post('/user_settings/change_email', must_be_logged_in, function (req, res) {
@@ -104,7 +113,10 @@ module.exports = function (app) {
 	});
 
 	app.get('/reset_password', function (req, res) {
-		res.render('reset_password');
+		res.render('reset_password', { breadcrumb: [
+				{ name: 'Home' , url: '/'},
+				{ name: 'Forgot Password', isActive: true}
+			] });
 	});
 
 	app.post('/reset_password', function (req, res) {

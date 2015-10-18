@@ -1,6 +1,9 @@
 module.exports = function (app) {
 	app.get('/subjects', must_be_logged_in, function (req, res) {
-		res.render('posts/subjects-list.swig', { user: req.session.user });
+		res.render('posts/subjects-list.swig', { user: req.session.user, breadcrumb: [
+				{ name: 'Home' , url: '/'},
+				{ name: 'Subjects', isActive: true}
+			] });
 	});
 };
 

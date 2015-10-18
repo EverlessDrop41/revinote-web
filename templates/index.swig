@@ -4,7 +4,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container">
   <div class="jumbotron">
     <h1>Revinote <small>Revision Notes</small></h1>
     <p>Revinote is a note making app, aimed at making notes for revision easier. It uses Firebase, which allows all notes to be synced in realtime accross all devices</p>

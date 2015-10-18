@@ -1,6 +1,11 @@
 module.exports = function (app) {
 	app.get('/subjects/:subject', must_be_logged_in, function (req, res) {
-		res.render('posts/notes-list.swig', { user: req.session.user, subject: req.params.subject.toLowerCase() });
+		res.render('posts/notes-list.swig', { user: req.session.user, 
+			subject: req.params.subject.toLowerCase(), breadcrumb: [
+				{ name: 'Home' , url: '/' },
+				{ name: "Subjects", url: '/subjects'},
+				{ name: req.params.subject.capitalize(), isActive: true}
+			] });
 	});
 
 	app.get('/subjects/:subject/:noteid', must_be_logged_in, function (req, res) {
@@ -8,7 +13,12 @@ module.exports = function (app) {
 			user: req.session.user, 
 			subject: req.params.subject.toLowerCase(), 
 			noteId: req.params.noteid,
-			Title: req.params.noteid.toString()
+			breadcrumb: [
+				{ name: 'Home' , url: '/' },
+				{ name: "Subjects", url: '/subjects'},
+				{ name: req.params.subject.capitalize(), url: '/subjects/' + req.params.subject },
+				{ name: req.params.noteid, isActive: true}
+			]
 		});
 	});
 };

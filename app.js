@@ -62,3 +62,10 @@ var server = app.listen(3000, function () {
 
   console.log('Example app listening at http://%s:%s', host, port);
 });
+
+//Useful prototype
+String.prototype.capitalize = function(){
+    return this.toLowerCase().replace( /\b\w/g, function (m) {
+        return m.toUpperCase();
+    });
+};

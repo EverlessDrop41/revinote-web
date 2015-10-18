@@ -70,8 +70,12 @@
 		<div class="container">
 			<div class="row">
 				<ol class="breadcrumb">
-				{% for item in breadcrumb %}
-				  <li {% if item.isActive %} class="active" {% endif %}><a href="{{item.url}}">{{item.name}}</a></li>
+				{% for item in breadcrumb %} 
+					{% if item.isActive %}
+				  	<li class="active">{{item.name}}</li>
+				  {% else %}
+				  	<li><a href="{{item.url}}">{{item.name}}</a></li>
+				  {% endif %}
 				{% endfor %}
 				</ol>
 			</div>
