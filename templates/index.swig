@@ -33,7 +33,7 @@
       <ul>
         <li> Web <strong>[In-Development]</strong></li>
         <li> Android <strong>[Planned]</strong></li>
-        <li> IOS <strong>[Planned]</strong></li>
+        <li> iOS <strong>[Planned]</strong></li>
         <li> Windows Phone <strong>[Planned]</strong></li>
         <li> Desktop <strong>[Planned]</strong></li>
         <li> Chrome Plugin <strong>[Planned]</strong></li>
@@ -53,7 +53,7 @@
       <p>For the backend, mostly the website. Very fast and allows server to be written in javascript. Express.js is a libary that makes setting up a http or https server very easy and fast. Node.js being written in javascript will allow easy interaction with the Firebase API.</p>
 
       <h3 id="xamarin">Xamarin</h3>
-      <p>Used for mobile apps. Xamarin.Forms allows one codebase to be used on Android, IOS and Windows Phone</p>
+      <p>Used for mobile apps. Xamarin.Forms allows one codebase to be used on Android, iOS and Windows Phone</p>
   </div>
 </div>
 {% endblock %}
