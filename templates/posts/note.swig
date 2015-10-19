@@ -35,7 +35,9 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="EdtContent">Content</label>
-				    <textarea type="text" class="form-control" name="EditContent" id="EditContent" placeholder="Note Content"></textarea>
+				    <div id="wmd-button-bar hidden"></div>
+				    <textarea type="text" class="form-control note-content-editor" name="EditContent" id="wmd-input" placeholder="Note Content"></textarea>
+				    <div id="wmd-preview" class="hidden"></div>
 				  </div>
 				  <button type="button" class="btn btn-default" id="EditNoteSubmit">Edit Note</button>
 				</form>
@@ -65,6 +67,7 @@
 </div>
 
 <script src="/js/note.js"></script>
+<script src="/js/note-editor.js"></script>
 <script src="/js/note-page.js"></script>
 {#<script src="/js/notes-list-page.js"></script>#}
 {% endblock %}

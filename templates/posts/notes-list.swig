@@ -29,8 +29,10 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="Content">Content</label>
-				    <textarea type="text" class="form-control" name="Note" id="Content" placeholder="Note Content"></textarea>
-				  </div>
+				    <div id="wmd-button-bar hidden"></div>
+				    <textarea type="text" class="form-control note-content-editor" name="EditContent" id="wmd-input" placeholder="Note Content"></textarea>
+				    <div id="wmd-preview" class="hidden"></div>
+					</div>
 				  <button type="button" class="btn btn-default" id="AddNote">Add Note</button>
 				</form>
 			</div>
@@ -60,5 +62,6 @@
 </div>
 
 <script src="/js/note.js"></script>
+<script src="/js/note-editor.js"></script>
 <script src="/js/notes-list-page.js"></script>
 {% endblock %}

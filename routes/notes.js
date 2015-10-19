@@ -5,7 +5,8 @@ module.exports = function (app) {
 				{ name: 'Home' , url: '/' },
 				{ name: "Subjects", url: '/subjects'},
 				{ name: req.params.subject.capitalize(), isActive: true}
-			] });
+			],
+			md_editor: true });
 	});
 
 	app.get('/subjects/:subject/:noteid', must_be_logged_in, function (req, res) {
@@ -18,7 +19,8 @@ module.exports = function (app) {
 				{ name: "Subjects", url: '/subjects'},
 				{ name: req.params.subject.capitalize(), url: '/subjects/' + req.params.subject },
 				{ name: req.params.noteid, isActive: true}
-			]
+			],
+			md_editor: true
 		});
 	});
 

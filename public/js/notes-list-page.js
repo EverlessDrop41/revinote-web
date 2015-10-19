@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
 	noteList = $("#NotesList");
 
 	TitleBox = $("#Title");
-	ContentBox = $("#Content");
+	ContentBox = $("#wmd-input");
 
 	AddNotePanel = $("#AddNotePanel");
 	AddNoteToggle = $("#AddNoteToggle");

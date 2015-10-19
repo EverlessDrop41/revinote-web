@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
 
 	NoteEditor = $("#NoteEditor");
 	EditTitle = $("#EditTitle");
-	EditContent = $("#EditContent");
+	EditContent = $("#wmd-input");
 	EditNoteBtn = $("#EditNoteSubmit");
 
 	EditToggle = $("#EditToggle");
