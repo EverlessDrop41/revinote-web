@@ -20,6 +20,9 @@
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 
+		{# Fonts #}
+		<link href='https://fonts.googleapis.com/css?family=Lora|Montserrat' rel='stylesheet' type='text/css'>
+
 		{# Markdown Data #}
 		<script type="text/javascript" src="/js/Markdown.Converter.js"></script>
 		<script type="text/javascript" src="/js/Markdown.Extra.min.js"></script>
