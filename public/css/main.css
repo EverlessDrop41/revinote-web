@@ -63,3 +63,7 @@ p, input, textarea {
 .hidden {
 	display: none;
 }
+
+.btn-toolbar {
+	margin-bottom: 10px;
+}
