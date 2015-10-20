@@ -46,4 +46,12 @@
 			<i class="fa fa-repeat fa-lg fa-pm"></i>
 	  </button>
 	</div>
+
+	<div class="btn-group" role="group" aria-label="History">
+		<a href="/post-help">
+		  <button type="button" class="btn btn-default" title="Markdown Help">
+		  	<i class="fa fa-question-circle fa-lg fa-pm"></i> Help
+		  </button>
+		</a>
+	</div>
 </div>
