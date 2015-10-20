@@ -9,6 +9,8 @@ jQuery(document).ready(function ($) {
 	AddNoteToggle = $("#AddNoteToggle");
 	DeleteNoteBtn = $("#DeleteNoteBtn");
 
+	AddNotePanel.hide();
+
 	if (hasRequiredData && FireRef) {
 		userBase = FireRef.child(uid);
 		notesBase = userBase.child("notes");

@@ -1,8 +1,13 @@
 {# Toolbar.swig #}
 <div class="toolbar">
-  <i class="fa fa-bold fa-lg fa-pm" emulate="#wmd-bold-button" title="Bold"></i> <!--Bold -->
-  <i class="fa fa-5x"></i>
-  <i class="fa fa-italic fa-lg fa-pm" emulate="#wmd-italic-button"></i><!--Italic-->
+	<div class="btn-group" role="group" aria-label="...">
+	  <button type="button" class="btn btn-default" emulate="#wmd-bold-button" title="Bold">
+	  	<i class="fa fa-bold fa-lg fa-pm"></i>
+	  </button>
+	  <button type="button" class="btn btn-default" emulate="#wmd-italic-button" title="Italic">
+			<i class="fa fa-italic fa-lg fa-pm"></i>
+	  </button>
+	</div>
   <i class="fa fa-5x"></i> <i class="fa fa-5x"></i> <i class="fa fa-5x"></i><!--Seperator -->
   <i class="fa fa-link fa-lg fa-pm" emulate="#wmd-link-button"></i>
   <i class="fa fa-5x"></i>
