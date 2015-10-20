@@ -48,6 +48,12 @@
 	</div>
 
 	<div class="btn-group" role="group" aria-label="History">
+	  <button type="button" class="btn btn-default" id="ToggleVisibility" data-icon="#ToggleVisibilityIcon" title="Toggle Visibility">
+	  	<i class="fa fa-eye fa-lg fa-pm" id="ToggleVisibilityIcon" ></i>
+	  </button>
+	</div>
+
+	<div class="btn-group" role="group" aria-label="History">
 		<a href="/post-help" target="_blank">
 		  <button type="button" class="btn btn-default" title="Markdown Help">
 		  	<i class="fa fa-question-circle fa-lg fa-pm"></i> Help
