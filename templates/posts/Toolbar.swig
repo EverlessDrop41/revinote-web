@@ -48,7 +48,7 @@
 	</div>
 
 	<div class="btn-group" role="group" aria-label="History">
-		<a href="/post-help">
+		<a href="/post-help" target="_blank">
 		  <button type="button" class="btn btn-default" title="Markdown Help">
 		  	<i class="fa fa-question-circle fa-lg fa-pm"></i> Help
 		  </button>
