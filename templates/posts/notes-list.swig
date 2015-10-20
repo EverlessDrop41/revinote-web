@@ -29,6 +29,7 @@
 				  </div>
 				  <div class="form-group">
 				    <label for="Content">Content</label>
+				    {% include "Toolbar.swig" %}
 				    <div id="wmd-button-bar hidden"></div>
 				    <textarea type="text" class="form-control note-content-editor" name="EditContent" id="wmd-input" placeholder="Note Content"></textarea>
 				    <div id="wmd-preview" class="hidden"></div>
