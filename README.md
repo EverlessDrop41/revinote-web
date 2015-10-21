@@ -1,8 +1,6 @@
 Revinote Web
 ==
 
-# Libraries 
-
 ## Backened
 
 ----
@@ -45,9 +43,20 @@ An express library that makes getting request data easier
 
 ## Front End
 
+### [Bootstrap 3](https://getbootstrap.com/)
+
+> Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+
+I used bootstrap as my U.I. framework as it made prototyping a lot easier and attractive. This choice was purely for speed. Due to it's popularity and me using a CDN it shouldn't affect the load times as the user will cache a copy from previous sites
+
 ### [jQuery](https://jquery.com/)
 
-jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+> jQuery is a fast, small, and feature-rich JavaScript library. It makes
+> things like HTML document traversal and manipulation, event handling,
+> animation, and Ajax much simpler with an easy-to-use API that works
+> across a multitude of browsers. With a combination of versatility and
+> extensibility, jQuery has changed the way that millions of people
+> write JavaScript.
 
 I chose to use jQuery because it makes interacting with the DOM a lot easier, it also includes some animations
 
@@ -76,3 +85,26 @@ A collection of plugins for Pagedown to enable mardown extra features. These fea
 | *smart_strong*  | No strong emphasis in the middle of words |
 | *abbr*          | Abbreviations |
 | *fenced_code*   | PHP Markdown Extra fenced code blocks |
+
+### [Highlight.js](https://highlightjs.org/ "Highlight.js")
+Syntax highlighting for javascript
+
+I chose to use this as it's very easy to use and I wanted to highlight the codeblocks
+
+### [Emojify](http://hassankhan.me/emojify.js/)
+
+Turns text into emojis
+
+Pretty self explanatory
+
+### [MathJax](https://www.mathjax.org/)
+
+A javascript libary for writing mathematical formulas
+
+$$ \sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6} $$
+
+It's very easy to use, and is used by a popular site, StackExchange
+
+### [FontAwesome](http://fontawesome.io/)
+
+A simple css library for icons. The icons are vectors so they scale well. All of the icons are free and of high quality.
