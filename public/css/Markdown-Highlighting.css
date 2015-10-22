@@ -1,0 +1,34 @@
+.hljs-header {
+	color: red;
+}
+
+.hljs-strong, .hljs-bullet {
+	font-weight: bold;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-blockquote:not(:first-of-type) {
+	background-color: rgba(128,128,128,0.05);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 15px 20px;
+  border-left: 5px solid rgba(128,128,128,0.075);
+  font-style: italic;
+}
+
+.hljs-code:not(:first-of-type) {
+	background-color: rgba(128,128,128,0.1);
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.hljs-link_label {
+	text-decoration: underline;
+}
+
+.hljs-link_url, .hljs-link_reference {
+	color: #AAA;
+}
