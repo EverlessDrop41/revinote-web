@@ -3,8 +3,6 @@ Revinote Web
 
 ## Backened
 
-----
-
 ### [Node.js](https://nodejs.org/en/)
 
 A Framework that allows javascript to run in a desktop environment
@@ -38,8 +36,6 @@ This is a simple library for express that handles session data. My reasons for u
 ### [Body-Parser](https://www.npmjs.com/package/body-parser)
 
 An express library that makes getting request data easier
-
----
 
 ## Front End
 
