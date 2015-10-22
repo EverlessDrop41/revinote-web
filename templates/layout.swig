@@ -45,6 +45,8 @@
 		{# HighlightJs #}
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/styles/github.min.css">
 		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.8.0/highlight.min.js"></script>
+		{# Markdown Highlighting CSS #}
+		<link rel="stylesheet" type="text/css" href="/css/Markdown-Highlighting.css">
 
 		{# Emojify #}
 		<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.css" />
