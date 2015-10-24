@@ -60,9 +60,15 @@
 		  </button>
 		</a>
 	</div>
+
+	<div class="btn-group" role="group" aria-label="History">
+	  <button type="button" id="PrintBtn" class="btn btn-default" title="Print File">
+	  	<i class="fa fa-print fa-lg fa-pm"></i> Print
+		</button>
+	</div>
 	
 	{% if noteId %}
-	<div class="btn-group" role="group" aria-label="History">
+	<div class="btn-group" role="group" aria-label="Raw Data">
 		<button type="button" class="btn btn-default" id="ViewRawBtn" title="View raw post data">
 	  	View Raw
 	  </button>

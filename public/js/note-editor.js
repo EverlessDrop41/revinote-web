@@ -44,10 +44,23 @@ jQuery(document).ready(function ($) {
 	  $("table").addClass("table");
 	});
 
+	//Note Already Exists
 	if (typeof noteId !== "undefined") {
 		function getRawUrl () {
 			loc = window.location
 			return loc.protocol + '//' + loc.hostname + ':' + loc.port + '/md/' + uid + '/'+ subject + '/' + noteId;
+		}
+
+		function printdiv()
+		{
+			var headstr = "<html><head><title></title></head><body>";
+			var footstr = "</body>";
+			var newstr = '<h1>' + document.all.item('Title').innerHTML + '</h1>' + document.all.item('Content').innerHTML;
+			var oldstr = document.body.innerHTML;
+			document.body.innerHTML = headstr+newstr+footstr;
+			window.print();
+			document.body.innerHTML = oldstr;
+			return false;
 		}
 
 		$("#ViewRawBtn").click(function () {
@@ -56,6 +69,10 @@ jQuery(document).ready(function ($) {
 
 		$("#OpenInStackEdit").click(function () {
 			window.open("https://stackedit.io/viewer?url=" + getRawUrl(), '_blank');
+		});
+
+		$("#PrintBtn").click(function () {
+			printdiv();
 		});
 	}
 
