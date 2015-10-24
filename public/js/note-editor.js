@@ -51,18 +51,6 @@ jQuery(document).ready(function ($) {
 			return loc.protocol + '//' + loc.hostname + ':' + loc.port + '/md/' + uid + '/'+ subject + '/' + noteId;
 		}
 
-		function printdiv()
-		{
-			var headstr = "<html><head><title></title></head><body>";
-			var footstr = "</body>";
-			var newstr = '<h1>' + document.all.item('Title').innerHTML + '</h1>' + document.all.item('Content').innerHTML;
-			var oldstr = document.body.innerHTML;
-			document.body.innerHTML = headstr+newstr+footstr;
-			window.print();
-			document.body.innerHTML = oldstr;
-			return false;
-		}
-
 		$("#ViewRawBtn").click(function () {
 			window.open(getRawUrl(),'_blank');
 		});
@@ -72,7 +60,7 @@ jQuery(document).ready(function ($) {
 		});
 
 		$("#PrintBtn").click(function () {
-			printdiv();
+			window.print();
 		});
 	}
 

@@ -45,25 +45,46 @@
 			</div>
 		</div>
 
-		<div class="page-header">
-		  <h1 id="Title">Loading...</h1>
+		<style type="text/css">
+			@media print {
+			  body * {
+			    visibility: hidden;
+			  }
+
+				#PrintData, #PrintData * {
+			    visibility: visible;
+			  }
+
+			  #PrintData {
+			    visibility: visible;
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			  }
+			}
+		</style>
+		
+		<div id="PrintData">
+			<div class="page-header">
+			  <h1 id="Title">Loading...</h1>
+			</div>
+
+			<div class="panel" id="loading" data-backdrop="static" data-keyboard="false">
+	      <div class="panel-header">
+	         <h1>Loading...</h1>
+	      </div>
+	      <div class="panel-body">
+	        <div class="progress">
+					  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+					  </div>
+					</div>
+	      </div>
+	    </div>
+
+			<p id="Content">
+			  Loading....
+			</p>
 		</div>
-
-		<div class="panel" id="loading" data-backdrop="static" data-keyboard="false">
-      <div class="panel-header">
-         <h1>Loading...</h1>
-      </div>
-      <div class="panel-body">
-        <div class="progress">
-				  <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
-				  </div>
-				</div>
-      </div>
-    </div>
-
-		<p id="Content">
-		  Loading....
-		</p>
 	</div>
 </div>
 
