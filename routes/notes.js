@@ -35,7 +35,7 @@ module.exports = function (app) {
 		noteRef = subjRef.child(nID);
 
 		noteRef.once("value", function (snap) {
-			res.send(snap.val().content);
+			res.send('# ' + snap.val().title + '\n' + snap.val().content);
 		}, function (errorObject) {
 		  console.log("The read failed: " + errorObject.code);
 		});
