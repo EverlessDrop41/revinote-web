@@ -60,4 +60,12 @@
 		  </button>
 		</a>
 	</div>
+	
+	{% if noteId %}
+	<div class="btn-group" role="group" aria-label="History">
+	  <button type="button" class="btn btn-default" id="OpenInStackEdit" title="Open In Stack Edit">
+	  	Open In Stack Edit
+	  </button>
+	</div>
+	{% endif %}
 </div>

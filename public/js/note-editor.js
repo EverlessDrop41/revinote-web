@@ -44,5 +44,9 @@ jQuery(document).ready(function ($) {
 	  $("table").addClass("table");
 	});
 
+	$("#OpenInStackEdit").click(function () {
+		alert(window.location.href);
+	});
+
 	ToggleBtn.click();
 });
