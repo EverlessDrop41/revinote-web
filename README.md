@@ -1,6 +1,8 @@
 Revinote Web
 ==
 
+Revinote is a note making app, aimed at making notes for revision easier. It uses Firebase, which allows all notes to be synced in realtime accross all devices
+
 ## Backened
 
 ### [Node.js](https://nodejs.org/en/)
