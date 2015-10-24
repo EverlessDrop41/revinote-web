@@ -63,6 +63,9 @@
 	
 	{% if noteId %}
 	<div class="btn-group" role="group" aria-label="History">
+		<button type="button" class="btn btn-default" id="ViewRawBtn" title="View raw post data">
+	  	View Raw
+	  </button>
 	  <button type="button" class="btn btn-default" id="OpenInStackEdit" title="Open In Stack Edit">
 	  	Open In Stack Edit
 	  </button>

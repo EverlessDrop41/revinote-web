@@ -44,9 +44,20 @@ jQuery(document).ready(function ($) {
 	  $("table").addClass("table");
 	});
 
-	$("#OpenInStackEdit").click(function () {
-		alert(window.location.href);
-	});
+	if (typeof noteId !== "undefined") {
+		function getRawUrl () {
+			loc = window.location
+			return loc.protocol + '//' + loc.hostname + ':' + loc.port + '/md/' + uid + '/'+ subject + '/' + noteId;
+		}
+
+		$("#ViewRawBtn").click(function () {
+			window.open(getRawUrl(),'_blank');
+		});
+
+		$("#OpenInStackEdit").click(function () {
+			window.open("https://stackedit.io/viewer?url=" + getRawUrl(), '_blank');
+		});
+	}
 
 	ToggleBtn.click();
 });
