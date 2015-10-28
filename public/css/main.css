@@ -1,5 +1,10 @@
 body {
 	color: #000;
+	background-color: #434A54;
+}
+
+#main_container {
+	background-color: #FFF;
 }
 
 .navbar-dark {

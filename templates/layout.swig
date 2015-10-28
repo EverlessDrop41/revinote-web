@@ -68,6 +68,7 @@
 	</head>
 
 	<body>
+	<div id="main_container">
 		<nav class="navbar navbar-dark">
 		    <!-- Brand and toggle get grouped for better mobile display -->
 		    <div class="navbar-header">
@@ -101,6 +102,8 @@
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
 		</nav>
+
+		
 		{% if breadcrumb %}
 		<div class="container">
 			<div class="row">
@@ -117,6 +120,8 @@
 		</div>
 		{% endif %}
     {% block content %}{% endblock %}
+    </div>
+
     </div>
     <br>
     <br>
