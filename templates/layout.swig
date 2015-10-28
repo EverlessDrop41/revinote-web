@@ -116,5 +116,46 @@
 			</div>
 		</div>
 		{% endif %}
-    {% block content %}{% endblock %}	</body>
+    {% block content %}{% endblock %}
+    </div>
+    <br>
+    <br>
+    <footer class="footer">
+        <div class="container-fluid">
+        	<div class="clearfix">
+        		<div class="footer-logo"><a href="#">Revinote</a></div>
+        		<dl class="footer-nav">
+	            <dt class="nav-title">REVINOTE</dt>
+	            <dd class="nav-item"><a href="#">Web App</a></dd>
+	            {#<dd class="nav-item"><a href="#">Blog</a></dd>#}
+	            <dd class="nav-item"><a href="#">Android App</a></dd>
+	            <dd class="nav-item"><a href="#">iOS App</a></dd>
+	          </dl>
+	          <dl class="footer-nav">
+	            <dt class="nav-title">POSTS</dt>
+	            <dd class="nav-item"><a href="#">Post Formatting</a></dd>
+	            <dd class="nav-item"><a href="#">Stack Edit</a></dd>
+	          </dl>
+	          <dl class="footer-nav">
+	            <dt class="nav-title">CODE</dt>
+	            <dd class="nav-item"><a href="#">Issues</a></dd>
+	            <dd class="nav-item"><a href="#">Github Repository</a></dd>
+	            <dd class="nav-item"><a href="#">Android Repository</a></dd>
+	            <dd class="nav-item"><a href="#">iOS Repository</a></dd>
+	          </dl>
+	          <dl class="footer-nav">
+	          	<dt class="nav-title">ACCOUNT</dt>
+	          	{% if user %}
+	          	<dd class="nav-item"><a href="#">Account Settings</a></dd>
+	            <dd class="nav-item"><a href="#">Log Out</a></dd>
+	            {% else %}
+	            <dd class="nav-item"><a href="#">Log In</a></dd>
+	            <dd class="nav-item"><a href="#">Sign Up</a></dd>
+	            {% endif %}
+	          </dl>
+	         </div>
+	         <div class="footer-copyright text-center">Copyright &copy; 2015 Everlessly Coding. All rights reserved.</div>
+	      </div>
+      </footer>
+    </body>
 </html>
