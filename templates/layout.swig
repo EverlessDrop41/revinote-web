@@ -11,6 +11,9 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+		<link rel="stylesheet" href="http://cdn.jsdelivr.net/bootflat/2.0.0/css/bootflat.css">
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/bootflat/2.0.0/css/bootflat.css.map">
 		
 		<!--Firebase Libary-->
 		<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
