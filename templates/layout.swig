@@ -136,19 +136,19 @@
 	            <dd class="nav-item"><a href="https://stackedit.io/">Stack Edit</a></dd>
 	          </dl>
 	          <dl class="footer-nav">
-	            <dt class="nav-title">CODE</dt>
+	            <dt class="nav-title"><i class="fa fa-github"></i> CODE</dt>
 	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-web">Web Repository</a></dd>
 	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-android">Android Repository</a></dd>
 	            <dd class="nav-item"><a href="#">iOS Repository</a></dd>
 	          </dl>
 	          <dl class="footer-nav">
-	            <dt class="nav-title">ISSUES</dt>
+	            <dt class="nav-title"><i class="fa fa-exclamation-circle"></i> ISSUES</dt>
 	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-web/issues">Web</a></dd>
 	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-android/issues">Android</a></dd>
 	            <dd class="nav-item"><a href="#">iOS</a></dd>
 	          </dl>
 	          <dl class="footer-nav">
-	          	<dt class="nav-title">ACCOUNT</dt>
+	          	<dt class="nav-title"><i class="fa fa-user"></i> ACCOUNT</dt>
 	          	{% if user %}
 	          	<dd class="nav-item"><a href="/user_settings">Account Settings</a></dd>
 	            <dd class="nav-item"><a href="/logout">Log Out</a></dd>
