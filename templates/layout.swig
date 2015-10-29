@@ -94,10 +94,10 @@
 			      			Signed in as {{ user.email|default('[ERROR NO USERNAME]') }} 
 			      		</a>
 		      		</li>
-		      		<li><a href="/logout">Logout</a></li>
+		      		<li><a href="/logout">Logout <i class="fa fa-lg fa-sign-out"></i></a></li>
 		      	{% else %}
-			        <li><a href="/login">Sign in</a></li>
-			        <li><a href="/sign_up">Sign up</a></li>
+			        <li><a href="/login"><i class="fa fa-lg fa-sign-in"></i> Sign in</a></li>
+			        <li><a href="/sign_up"><i class="fa fa-lg fa-user-plus"></i> Sign up</a></li>
 		        {% endif %}
 		      </ul>
 		    </div><!-- /.navbar-collapse -->
@@ -151,10 +151,10 @@
 	          	<dt class="nav-title"><i class="fa fa-user"></i> ACCOUNT</dt>
 	          	{% if user %}
 	          	<dd class="nav-item"><a href="/user_settings">Account Settings</a></dd>
-	            <dd class="nav-item"><a href="/logout">Log Out</a></dd>
+	            <dd class="nav-item"><a href="/logout">Log Out <i class="fa fa-lg fa-sign-out"></i></a></dd>
 	            {% else %}
-	            <dd class="nav-item"><a href="/login">Log In</a></dd>
-	            <dd class="nav-item"><a href="/sign_up">Sign Up</a></dd>
+	            <dd class="nav-item"><a href="/login"><i class="fa fa-lg fa-sign-in"></i> Log In</a></dd>
+	            <dd class="nav-item"><a href="/sign_up"><i class="fa fa-lg fa-user-plus"></i> Sign Up</a></dd>
 	            {% endif %}
 	          </dl>
 	         </div>
