@@ -119,43 +119,42 @@
 			</div>
 		</div>
 		{% endif %}
-    {% block content %}{% endblock %}
+    {% block content %}{% endblock %} <br><br><br>
     </div>
 
-    </div>
-    <br>
-    <br>
     <footer class="footer">
         <div class="container-fluid">
         	<div class="clearfix">
-        		<div class="footer-logo"><a href="#">Revinote</a></div>
+        		<div class="footer-logo"><a href="/">Revinote</a></div>
         		<dl class="footer-nav">
 	            <dt class="nav-title">REVINOTE</dt>
-	            <dd class="nav-item"><a href="#">Web App</a></dd>
+	            <dd class="nav-item"><a href="/">Web App</a></dd>
 	            {#<dd class="nav-item"><a href="#">Blog</a></dd>#}
-	            <dd class="nav-item"><a href="#">Android App</a></dd>
+	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-android">Android App</a></dd>
 	            <dd class="nav-item"><a href="#">iOS App</a></dd>
-	          </dl>
-	          <dl class="footer-nav">
-	            <dt class="nav-title">POSTS</dt>
-	            <dd class="nav-item"><a href="#">Post Formatting</a></dd>
-	            <dd class="nav-item"><a href="#">Stack Edit</a></dd>
+	            <dd class="nav-item"><a href="/post-help">Post Formatting</a></dd>
+	            <dd class="nav-item"><a href="https://stackedit.io/">Stack Edit</a></dd>
 	          </dl>
 	          <dl class="footer-nav">
 	            <dt class="nav-title">CODE</dt>
-	            <dd class="nav-item"><a href="#">Issues</a></dd>
-	            <dd class="nav-item"><a href="#">Github Repository</a></dd>
-	            <dd class="nav-item"><a href="#">Android Repository</a></dd>
+	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-web">Web Repository</a></dd>
+	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-android">Android Repository</a></dd>
 	            <dd class="nav-item"><a href="#">iOS Repository</a></dd>
+	          </dl>
+	          <dl class="footer-nav">
+	            <dt class="nav-title">ISSUES</dt>
+	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-web/issues">Web</a></dd>
+	            <dd class="nav-item"><a href="https://github.com/EverlessDrop41/revinote-android/issues">Android</a></dd>
+	            <dd class="nav-item"><a href="#">iOS</a></dd>
 	          </dl>
 	          <dl class="footer-nav">
 	          	<dt class="nav-title">ACCOUNT</dt>
 	          	{% if user %}
-	          	<dd class="nav-item"><a href="#">Account Settings</a></dd>
-	            <dd class="nav-item"><a href="#">Log Out</a></dd>
+	          	<dd class="nav-item"><a href="/user_settings">Account Settings</a></dd>
+	            <dd class="nav-item"><a href="/logout">Log Out</a></dd>
 	            {% else %}
-	            <dd class="nav-item"><a href="#">Log In</a></dd>
-	            <dd class="nav-item"><a href="#">Sign Up</a></dd>
+	            <dd class="nav-item"><a href="/login">Log In</a></dd>
+	            <dd class="nav-item"><a href="/sign_up">Sign Up</a></dd>
 	            {% endif %}
 	          </dl>
 	         </div>
