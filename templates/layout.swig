@@ -103,7 +103,7 @@
 		    </div><!-- /.navbar-collapse -->
 		</nav>
 
-		
+		<div id="content">
 		{% if breadcrumb %}
 		<div class="container">
 			<div class="row">
@@ -119,11 +119,13 @@
 			</div>
 		</div>
 		{% endif %}
-    {% block content %}{% endblock %} <br><br><br>
+    {% block content %}{% endblock %}
+    </div> 
+    <br><br><br>
     </div>
 
-    <footer class="footer">
-        <div class="container-fluid">
+    <div class="footer">
+        <div class="container">
         	<div class="clearfix">
         		<div class="footer-logo"><a href="/">Revinote</a></div>
         		<dl class="footer-nav">
@@ -160,6 +162,6 @@
 	         </div>
 	         <div class="footer-copyright text-center">Copyright &copy; 2015 Everlessly Coding. All rights reserved.</div>
 	      </div>
-      </footer>
+      </div>
     </body>
 </html>
