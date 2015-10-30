@@ -7,6 +7,10 @@ body {
 	background-color: #FFF;
 }
 
+small {
+	color: #7f8c8d !important;
+}
+
 .navbar-dark {
 	color: #fff !important;
 	background-color: #373737;
