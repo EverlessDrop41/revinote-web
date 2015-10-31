@@ -71,7 +71,7 @@ jQuery(document).ready(function ($) {
 		})
 
 		EditNoteBtn.click(function () {
-			var n = new Note(EditTitle.val(), EditContent.val(), subject);
+			var n = new Note(EditTitle.val(), ace1.getValue(), subject);
 			note.update(n.getData());
 		});
 	} else {

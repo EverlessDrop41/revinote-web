@@ -32,7 +32,7 @@ jQuery(document).ready(function ($) {
 
 		$("#AddNote").click(function() {
 			name = TitleBox.val();
-			description = ContentBox.val();
+			description = ace1.getValue();
 
 			if (name && description) {
 				TitleBox.val('');

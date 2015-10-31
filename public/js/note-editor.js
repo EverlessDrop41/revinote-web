@@ -12,11 +12,8 @@ jQuery(document).ready(function ($) {
   editor.run(ace1);
   ace1.setTheme("ace/theme/chrome");
   ace1.getSession().setMode("ace/mode/markdown");
-  try {
-  	//ace1.session._emit('change');
-  } 
-  catch (err) {
-  	console.error (err);  }
+
+  
 
 	var ToggleBtn = $("#ToggleVisibility");
 	var ToggleIcon = $(ToggleBtn.attr('data-icon'));
