@@ -57,10 +57,18 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>
 
 		{# MathJax #}
-		{#<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 		<script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}, ignoreClass: "no-jax"});
-		</script>#}
+		  MathJax.Hub.Config({
+		  	tex2jax: {
+		  		inlineMath: [['$','$']],
+					processClass: "mathjax",
+    			ignoreClass: "no-mathjax"
+				}
+			});
+
+			MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+		</script>
 
 		{# font-awesome [Icons] #}
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -68,7 +76,7 @@
 		{% block head %} {% endblock %}
 	</head>
 
-	<body>
+	<body class="no-mathjax">
 	<div id="main_container">
 		<nav class="navbar navbar-dark">
 		    <!-- Brand and toggle get grouped for better mobile display -->

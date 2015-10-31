@@ -38,7 +38,7 @@
 				    {% include "Toolbar.swig" %}
 				    <div id="wmd-button-bar" class="hidden"></div>
 				    <div type="text" class="form-control note-content-editor no-jax" name="EditContent" id="wmd-input" placeholder="Note Content"></div>
-				    <div id="wmd-preview"></div>
+				    <div id="wmd-preview" class="mathjax"></div>
 				  </div>
 				  <button type="button" class="btn btn-default" id="EditNoteSubmit">Edit Note</button>
 				</form>
@@ -81,7 +81,7 @@
 	      </div>
 	    </div>
 
-			<p id="Content">
+			<p id="Content" class="mathjax">
 			  Loading....
 			</p>
 		</div>

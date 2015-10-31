@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
 			ContentBox.show();
 
 			//MathJax
-		  //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+		  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 		  //Highlight.js
 		  $('pre code').each(function(i, block) {

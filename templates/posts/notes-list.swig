@@ -55,7 +55,7 @@
       </div>
     </div>
 
-		<div class="list-group" id="NotesList">
+		<div class="list-group mathjax" id="NotesList">
 		  {# Subject List #}
 		  
 		</div>

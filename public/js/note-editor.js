@@ -13,7 +13,6 @@ jQuery(document).ready(function ($) {
   ace1.setTheme("ace/theme/chrome");
   ace1.getSession().setMode("ace/mode/markdown");
 
-  
 
 	var ToggleBtn = $("#ToggleVisibility");
 	var ToggleIcon = $(ToggleBtn.attr('data-icon'));
@@ -37,7 +36,7 @@ jQuery(document).ready(function ($) {
 
 	$("#wmd-input").keyup(function () {
 		//MathJax
-	  //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+	  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 	  //Highlight.js
 	  $('pre code').each(function(i, block) {
