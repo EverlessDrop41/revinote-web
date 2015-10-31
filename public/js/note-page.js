@@ -35,9 +35,7 @@ jQuery(document).ready(function ($) {
 			ContentBox.html(converter.makeHtml(data.content));
 
 			EditTitle.val(data.title);
-			//EditContent.text(data.content);
 			ace1.setValue(data.content, 1);
-			//ace1.session._emit('change', { range: 0});
 
 			LoadingBox.hide();
 			TitleBox.show();

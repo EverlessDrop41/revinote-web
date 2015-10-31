@@ -98,7 +98,7 @@ p, input, textarea {
 }
 
 #wmd-input {
-	min-height: 300px;
+  height: 300px;
 	resize: both !important;
 	border-radius: 0px;
 }

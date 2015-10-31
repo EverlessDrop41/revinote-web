@@ -12,6 +12,13 @@ jQuery(document).ready(function ($) {
   editor.run(ace1);
   ace1.setTheme("ace/theme/chrome");
   ace1.getSession().setMode("ace/mode/markdown");
+  ace1.resize();
+  $( "#wmd-input" ).resizable({
+    resize: function( event, ui ) {
+      ace1.resize();
+      console.log("Hi");
+    }
+  });
 
 
 	var ToggleBtn = $("#ToggleVisibility");

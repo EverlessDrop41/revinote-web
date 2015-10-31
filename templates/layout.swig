@@ -13,7 +13,7 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootflat/2.0.0/css/bootflat.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootflat/2.0.0/css/bootflat.css.map">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootflat/2.0.0/css/bootflat.css.map">
 		
 		<!--Firebase Libary-->
 		<script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
@@ -21,6 +21,8 @@
 
 		<!--jQuery CDN-->
 		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 
 		{# Fonts #}
