@@ -35,14 +35,16 @@ jQuery(document).ready(function ($) {
 			ContentBox.html(converter.makeHtml(data.content));
 
 			EditTitle.val(data.title);
-			EditContent.text(data.content);
+			//EditContent.text(data.content);
+			ace1.setValue(data.content, 1);
+			//ace1.session._emit('change', { range: 0});
 
 			LoadingBox.hide();
 			TitleBox.show();
 			ContentBox.show();
 
 			//MathJax
-		  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+		  //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 		  //Highlight.js
 		  $('pre code').each(function(i, block) {
@@ -50,7 +52,7 @@ jQuery(document).ready(function ($) {
 		  });
 
 		  //Emojify.js
-		  emojify.setConfig({img_dir: 'http://hassankhan.me/emojify.js/images/emoji'});
+		  emojify.setConfig({img_dir: 'http://hassankhan.me/emojify.js/images/emoji', blacklist: {classes: "no-jax"}});
 		  emojify.run();
 
 		  //Style Tables

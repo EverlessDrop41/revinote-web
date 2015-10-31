@@ -97,6 +97,12 @@ p, input, textarea {
 	padding: 20px;
 }
 
+#wmd-input {
+	min-height: 300px;
+	resize: both !important;
+	border-radius: 0px;
+}
+
 @media (max-width: 768px) {
 	.footer-logo, .footer-nav {
     display: block;

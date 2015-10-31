@@ -1,11 +1,22 @@
+var ace1;
+
 jQuery(document).ready(function ($) {
 	//Note Editor
 	var converter = new Markdown.Converter();
 	Markdown.Extra.init(converter);
 	var editor = new Markdown.Editor(converter);
-
-	editor.getConverter();
-	editor.run();
+  
+  var text = document.getElementById('wmd-input').innerHTML;
+  ace1 = ace.edit("wmd-input");
+  ace1.setValue(text, -1);
+  editor.run(ace1);
+  ace1.setTheme("ace/theme/chrome");
+  ace1.getSession().setMode("ace/mode/markdown");
+  try {
+  	//ace1.session._emit('change');
+  } 
+  catch (err) {
+  	console.error (err);  }
 
 	var ToggleBtn = $("#ToggleVisibility");
 	var ToggleIcon = $(ToggleBtn.attr('data-icon'));
@@ -29,7 +40,7 @@ jQuery(document).ready(function ($) {
 
 	$("#wmd-input").keyup(function () {
 		//MathJax
-	  MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+	  //MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 	  //Highlight.js
 	  $('pre code').each(function(i, block) {

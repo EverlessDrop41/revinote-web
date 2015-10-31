@@ -37,7 +37,7 @@
 				    <label for="EdtContent">Content</label>
 				    {% include "Toolbar.swig" %}
 				    <div id="wmd-button-bar" class="hidden"></div>
-				    <textarea type="text" class="form-control note-content-editor" name="EditContent" id="wmd-input" placeholder="Note Content"></textarea>
+				    <div type="text" class="form-control note-content-editor no-jax" name="EditContent" id="wmd-input" placeholder="Note Content"></div>
 				    <div id="wmd-preview"></div>
 				  </div>
 				  <button type="button" class="btn btn-default" id="EditNoteSubmit">Edit Note</button>
@@ -91,5 +91,6 @@
 <script src="/js/note.js"></script>
 <script src="/js/note-editor.js"></script>
 <script src="/js/note-page.js"></script>
+
 {#<script src="/js/notes-list-page.js"></script>#}
 {% endblock %}

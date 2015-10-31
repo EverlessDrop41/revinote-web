@@ -30,7 +30,8 @@
 		<script type="text/javascript" src="/js/Markdown.Converter.js"></script>
 		<script type="text/javascript" src="/js/Markdown.Extra.min.js"></script>
 		{% if md_editor %}
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pagedown/1.0/Markdown.Editor.min.js"></script>
+		<script type="text/javascript" src="/js/Markdown.Editor.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			jQuery(document).ready(function($) {
           $('[emulate]').click(function(event) {
@@ -56,10 +57,10 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/emojify.js/0.9.5/emojify.min.js"></script>
 
 		{# MathJax #}
-		<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+		{#<script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 		<script type="text/x-mathjax-config">
-		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}});
-		</script>
+		  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$']]}, ignoreClass: "no-jax"});
+		</script>#}
 
 		{# font-awesome [Icons] #}
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
