@@ -20,6 +20,11 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  /*ace1.setOptions({
+	  autoScrollEditorIntoView: true,
+	  maxLines: 1000
+	});*/
+
 
 	var ToggleBtn = $("#ToggleVisibility");
 	var ToggleIcon = $(ToggleBtn.attr('data-icon'));

@@ -33,7 +33,7 @@
 		<script type="text/javascript" src="/js/Markdown.Extra.min.js"></script>
 		{% if md_editor %}
 		<script type="text/javascript" src="/js/Markdown.Editor.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js" type="text/javascript" charset="utf-8"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.1.01/ace.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			jQuery(document).ready(function($) {
           $('[emulate]').click(function(event) {
