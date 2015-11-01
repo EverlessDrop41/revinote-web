@@ -15,10 +15,9 @@ jQuery(document).ready(function ($) {
 
 	if (hasRequiredData && FireRef) {
 		NoteEditor.hide();
+		console.log("hid not editor");
 		var converter = new Markdown.Converter();
 		Markdown.Extra.init(converter);
-		TitleBox.hide();
-		ContentBox.hide();
 
 		userBase = FireRef.child(uid);
 		notesBase = userBase.child("notes");
@@ -77,6 +76,9 @@ jQuery(document).ready(function ($) {
 
 		EditToggle.click(function () {
 			NoteEditor.slideToggle();
+
+			ace1.resize();
+			ace1.renderer.updateFull();
 		})
 
 		EditNoteBtn.click(function () {

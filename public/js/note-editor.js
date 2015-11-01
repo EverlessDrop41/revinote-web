@@ -12,6 +12,8 @@ jQuery(document).ready(function ($) {
   editor.run(ace1);
   ace1.setTheme("ace/theme/chrome");
   ace1.getSession().setMode("ace/mode/markdown");
+
+  console.log("Initialized Editor");
   $( "#wmd-input" ).resizable({
     resize: function( event, ui ) {
       ace1.resize();
@@ -19,7 +21,7 @@ jQuery(document).ready(function ($) {
   });
 
   ace1.resize();
-  $("#wmd-input").trigger('resize');
+	ace1.renderer.updateFull();
 
 	var ToggleBtn = $("#ToggleVisibility");
 	var ToggleIcon = $(ToggleBtn.attr('data-icon'));

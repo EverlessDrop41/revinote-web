@@ -46,6 +46,8 @@ jQuery(document).ready(function ($) {
 
 		AddNoteToggle.click(function () {
 			AddNotePanel.slideToggle();
+			ace1.resize();
+			ace1.renderer.updateFull();
 		});
 
 		DeleteNoteBtn.click(function() {
