@@ -50,7 +50,18 @@ jQuery(document).ready(function ($) {
 		  });
 
 		  //Emojify.js
-		  emojify.setConfig({img_dir: 'http://hassankhan.me/emojify.js/images/emoji', blacklist: {classes: "no-jax"}});
+		  emojify.setConfig({
+		  	img_dir: 'http://hassankhan.me/emojify.js/images/emoji', 
+		  	blacklist: {
+		  		classes: {
+		  			"no-mathjax": 1, 
+		  			"note-content-editor": 1, 
+		  			"ace_editor": 1, 
+		  			"ace_line": 1 
+		  		}
+		  	}
+		  });
+
 		  emojify.run();
 
 		  //Style Tables

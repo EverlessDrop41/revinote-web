@@ -12,19 +12,14 @@ jQuery(document).ready(function ($) {
   editor.run(ace1);
   ace1.setTheme("ace/theme/chrome");
   ace1.getSession().setMode("ace/mode/markdown");
-  ace1.resize();
   $( "#wmd-input" ).resizable({
     resize: function( event, ui ) {
       ace1.resize();
-      console.log("Hi");
     }
   });
 
-  /*ace1.setOptions({
-	  autoScrollEditorIntoView: true,
-	  maxLines: 1000
-	});*/
-
+  ace1.resize();
+  $("#wmd-input").trigger('resize');
 
 	var ToggleBtn = $("#ToggleVisibility");
 	var ToggleIcon = $(ToggleBtn.attr('data-icon'));
@@ -57,7 +52,7 @@ jQuery(document).ready(function ($) {
 
 	  //Emojify.js
 	  emojify.setConfig({img_dir: 'http://hassankhan.me/emojify.js/images/emoji'});
-	  emojify.run();
+	  emojify.run(wmd_preview[0]);
 
 	  //Style Tables
 	  $("table").addClass("table");
