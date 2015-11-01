@@ -134,8 +134,8 @@
 {% if user %}
 <script type="text/javascript">
 	var authToken = "{{user.token}}"; 
-	ref.authWithCustomToken(authToken, function(error, authData) { 
-		if (err) {console.error(err)}
+	FireRef.authWithCustomToken(authToken, function(error, authData) { 
+		if (error) {console.error(err)}
 	}, {
 	  remember: "sessionOnly"
 	});
