@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
   ace1 = ace.edit("wmd-input");
   ace1.setValue(text, -1);
   editor.run(ace1);
-  ace1.setTheme("ace/theme/chrome");
+  ace1.setTheme("ace/theme/dreamweaver");
   ace1.getSession().setMode("ace/mode/markdown");
 
   console.log("Initialized Editor");
