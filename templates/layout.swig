@@ -130,6 +130,18 @@
 			</div>
 		</div>
 		{% endif %}
+
+{% if user %}
+<script type="text/javascript">
+	var authToken = "{{user.token}}"; 
+	ref.authWithCustomToken(authToken, function(error, authData) { 
+		if (err) {console.error(err)}
+	}, {
+	  remember: "sessionOnly"
+	});
+</script>
+{% endif %}
+
     {% block content %}{% endblock %}
     </div> 
     <br><br><br>
