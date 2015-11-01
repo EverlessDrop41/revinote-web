@@ -22,6 +22,7 @@ jQuery(document).ready(function ($) {
 
   ace1.resize();
 	ace1.renderer.updateFull();
+	ace1.getSession().setUseWrapMode(true);
 
 	var ToggleBtn = $("#ToggleVisibility");
 	var ToggleIcon = $(ToggleBtn.attr('data-icon'));
