@@ -99,7 +99,6 @@ p, input, textarea {
 
 #wmd-input {
   height: 300px;
-	resize: both !important;
 	border-radius: 0px;
 }
 
