@@ -84,6 +84,12 @@ A collection of plugins for Pagedown to enable mardown extra features. These fea
 | *abbr*          | Abbreviations |
 | *fenced_code*   | PHP Markdown Extra fenced code blocks |
 
+### [Pagedown-Ace](https://github.com/benweet/pagedown-ace)
+
+This plugin combines the pagedown editor with the ace editor. 
+
+The pagedown editor provides shortcut keys and a toolbar while the ace editor provides syntax hilighting and better typing experience (e.g. auto list extension), as well as collapseable blocks.
+
 ### [Highlight.js](https://highlightjs.org/ "Highlight.js")
 Syntax highlighting for javascript
 
