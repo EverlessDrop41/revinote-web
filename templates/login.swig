@@ -25,9 +25,15 @@
 					    <button type="submit" class="btn btn-primary">Submit</button>
 					  </div>
 					  <div class="btn-group" role="group">
+					  {% if signup %}
+					  	<a type="button" href="/login" class="btn btn-info">
+					    	Sign in
+					    </a>
+					  {% else %}
 					  	<a type="button" href="/sign_up" class="btn btn-info">
 					    	Sign up
 					    </a>
+					  {% endif %}
 					  </div>
 					  <div class="btn-group" role="group">
 					    <a type="button" href="/reset_password" class="btn btn-warning">
