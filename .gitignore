@@ -8,6 +8,10 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
+#VS-Code
+.settings
+.code
+
 # Linux
 .directory
 *~
