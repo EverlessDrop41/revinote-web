@@ -9,41 +9,7 @@
 		    	<h1>{% if signup %} Sign up {% else %} Login {% endif %}</h1>
 		    	{% if signup %} <div class="alert alert-info" role="alert"><strong>Notice: </strong> Creating an account will not log you in</div> {% endif %}
 
-					{% for message in successes %}
-					<div class="alert alert-dismissible alert-success" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						{{ message }}
-					</div>
-					{% endfor %}
-
-					{% for message in infos %}
-					<div class="alert alert-dismissible alert-info" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						{{ message }}
-					</div>
-					{% endfor %}
-
-					{% for message in warnings %}
-					<div class="alert alert-dismissible alert-warning" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						{{ message }}
-					</div>
-					{% endfor %}
-					
-					{% for message in dangers %}
-					<div class="alert alert-dismissible alert-danger" role="alert">
-						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-						{{ message }}
-					</div>
-					{% endfor %}
+					{% include "notifications.swig" %}
 
 				  <div class="form-group">
 				    <label for="exampleInputEmail1">Email address</label>
