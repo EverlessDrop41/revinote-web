@@ -20,6 +20,17 @@
 		  </div>
 		</div>
 
+		<br>
+
+		<div class="btn-group btn-group-justified" role="group" aria-label="widgets">
+		  <div class="btn-group" role="group">
+		    <button type="button" class="btn btn-default" id="BrowserToggle">Toggle Broswer</button>
+		  </div>
+		  <div class="btn-group" role="group">
+		    <button type="button" class="btn btn-default" id="DictionaryToggle">Toggle Dictionary</button>
+		  </div>
+		</div>
+
 		<br />
 
 		<div class="panel panel-default" id="NoteEditor">

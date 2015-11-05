@@ -1,15 +1,23 @@
 jQuery(document).ready(function ($) {
-	$("#BrowserWidget").dialog({
+	bw = $("#BrowserWidget");
+
+	bw.dialog({
 		resize: function (event, ui) {
 			frame = $("#BrowserWidgetIFrame");
 			heightPadding = frame.outerHeight() - frame.innerHeight();
-			frame.height($("#BrowserWidget").height() - heightPadding);
+			frame.height(bw.height() - heightPadding);
 
-			frame.width($("#BrowserWidget").width());
+			frame.width(bw.width());
 		}
 	});
 
+	bw.dialog('close');
+
 	$("#BrowserToggle").click(function () {
-		//Toggle browser visbility
+		if (bw.dialog("isOpen")) {
+			bw.dialog('close');
+		} else {
+			bw.dialog('open');
+		}
 	});
 });
