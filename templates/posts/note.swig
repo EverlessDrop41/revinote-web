@@ -85,12 +85,16 @@
 			  Loading....
 			</p>
 		</div>
+		<div id="BrowserWidget" class="hidden" title="Broswer">
+			  <iframe class="embed-responsive-item" id="BrowserWidgetIFrame" src="http://duckduckgo.com"></iframe>
+		</div>
 	</div>
 </div>
 
 <script src="/js/note.js"></script>
 <script src="/js/note-editor.js"></script>
 <script src="/js/note-page.js"></script>
+<script src="/js/widgets/browser-widget.js"></script>
 
 {#<script src="/js/notes-list-page.js"></script>#}
 {% endblock %}
