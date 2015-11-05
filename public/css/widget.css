@@ -7,3 +7,7 @@
 	margin: none !important;
 	padding: none;
 }
+
+.ui-dialog .ui-dialog-content {
+    padding: 3px;
+}

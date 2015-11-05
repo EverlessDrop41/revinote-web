@@ -85,15 +85,29 @@
 			  Loading....
 			</p>
 		</div>
-		<div id="BrowserWidget" class="hidden" title="Broswer">
+
+		{#<div id="BrowserWidget" class="hidden" title="Broswer">
 			  <iframe class="embed-responsive-item" id="BrowserWidgetIFrame" src="http://duckduckgo.com"></iframe>
+		</div>#}
+
+		<div id="DictionaryWidget" title="Dictionary">
+			  <div class="form-inline">
+			  	<div class="form-group">
+				    <label for="wordInput">Word</label>
+				    <input type="text" class="form-control" id="wordInput" placeholder="Input a word...">
+				    <button type="submit" class="btn btn-default">Find Word</button>
+				  </div>
+			  </div>
+			  <p id="definitionBox"></p>
 		</div>
+
 	</div>
 </div>
 
 <script src="/js/note.js"></script>
 <script src="/js/note-editor.js"></script>
 <script src="/js/note-page.js"></script>
+<script src="/js/widgets/dictionary-widget.js"></script>
 <script src="/js/widgets/browser-widget.js"></script>
 
 {#<script src="/js/notes-list-page.js"></script>#}
