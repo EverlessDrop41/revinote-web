@@ -102,6 +102,7 @@
 		</div>
 
 		<div id="DictionaryWidget" title="Dictionary">
+			<div class="alert alert-danger" role="alert"><strong>Warning!</strong> The dictinary is not yet working</div>
 			  <div class="form-inline">
 			  	<div class="form-group">
 				    <label for="wordInput">Word</label>
