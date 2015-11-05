@@ -86,9 +86,9 @@
 			</p>
 		</div>
 
-		{#<div id="BrowserWidget" class="hidden" title="Broswer">
+		<div id="BrowserWidget" class="" title="Broswer">
 			  <iframe class="embed-responsive-item" id="BrowserWidgetIFrame" src="http://duckduckgo.com"></iframe>
-		</div>#}
+		</div>
 
 		<div id="DictionaryWidget" title="Dictionary">
 			  <div class="form-inline">
