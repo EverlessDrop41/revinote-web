@@ -97,8 +97,9 @@
 			</p>
 		</div>
 
-		<div id="BrowserWidget" class="" title="Broswer">
-			  <iframe class="embed-responsive-item" id="BrowserWidgetIFrame" src="http://duckduckgo.com"></iframe>
+		<div id="BrowserWidget" class="" title="Browser">
+			<button type="button" id="BrowserHomeBtn" class="btn btn-primary btn-lg btn-block"><i class="fa fa-home"></i>Home</button>
+			<iframe class="embed-responsive-item" id="BrowserWidgetIFrame" src="http://duckduckgo.com"></iframe>
 		</div>
 
 		<div id="DictionaryWidget" title="Dictionary">
