@@ -103,12 +103,11 @@
 		</div>
 
 		<div id="DictionaryWidget" title="Dictionary">
-			<div class="alert alert-danger" role="alert"><strong>Warning!</strong> The dictinary is not yet working</div>
 			  <div class="form-inline">
 			  	<div class="form-group">
 				    <label for="wordInput">Word</label>
 				    <input type="text" class="form-control" id="wordInput" placeholder="Input a word...">
-				    <button type="submit" class="btn btn-default">Find Word</button>
+				    <button type="submit" id="submitWord" class="btn btn-default">Find Word</button>
 				  </div>
 			  </div>
 			  <p id="definitionBox"></p>

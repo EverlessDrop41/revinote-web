@@ -41,14 +41,23 @@ jQuery(document).ready(function ($) {
 		}
 	});
 
-	$.ajax({
-		url : "https://wordsapiv1.p.mashape.com/words/bump", 
-		beforeSend: function( xhr ) {
-	  	xhr.setRequestHeader("X-Mashape-Key", "8eVWqtLfcGmsh6SVYIdtEi3RFU0wp1eHyfFjsn55YAFaazgReV");
-	  },
-	  success: function (data) {
-	  	w = new Word(data.word, data.results, data.syllables);
-			console.log(w.generateHtml());
-		}
+	$("#submitWord").click(function() {
+		wordInput = $("#wordInput");
+		console.log(wordInput.val());
+
+		$.ajax({
+			url : "https://wordsapiv1.p.mashape.com/words/" + wordInput.val(), 
+			beforeSend: function( xhr ) {
+		  	xhr.setRequestHeader("X-Mashape-Key", "8eVWqtLfcGmsh6SVYIdtEi3RFU0wp1eHyfFjsn55YAFaazgReV");
+		  },
+		  success: function (data) {
+		  	w = new Word(data.word, data.results, data.syllables);
+		  	$("#definitionBox").html(w.generateHtml());
+			}
+		}).fail(function(xhr, status, error) {
+				console.log("error");
+				console.log(status);
+				alert(xhr.requestURL);
+		});
 	});
 });
