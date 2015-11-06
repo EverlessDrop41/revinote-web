@@ -70,14 +70,11 @@
         <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.</p>
       </blockquote>
       <p>I used bootstrap as my U.I. framework as it made prototyping a lot easier and attractive. This choice was purely for speed. Due to it’s popularity and me using a CDN it shouldn’t affect the load times as the user will cache a copy from previous sites</p>
+      <h3 id="bootflat"><a href="http://bootflat.github.io/">Bootflat</a></h3>
+      <p>Bootflat is a flat UI theme for bootstrap</p>
       <h3 id="jquery"><a href="https://jquery.com/">jQuery</a></h3>
       <blockquote>
-        <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes <br>
-          things like HTML document traversal and manipulation, event handling, <br>
-          animation, and Ajax much simpler with an easy-to-use API that works <br>
-          across a multitude of browsers. With a combination of versatility and <br>
-          extensibility, jQuery has changed the way that millions of people <br>
-          write JavaScript.
+        <p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and  extensibility, jQuery has changed the way that millions of people write JavaScript.
         </p>
       </blockquote>
       <p>I chose to use jQuery because it makes interacting with the DOM a lot easier, it also includes some animations</p>
@@ -141,6 +138,9 @@
           </tr>
         </tbody>
       </table>
+      <h3 id="pagedown-ace"><a href="https://github.com/benweet/pagedown-ace" title="Pagedown-Ace">PageDown Ace</a></h3>
+      <p>This plugin combines the pagedown editor with the ace editor.</p>
+      <p>The pagedown editor provides shortcut keys and a toolbar while the ace editor provides syntax hilighting and better typing experience (e.g. auto list extension), as well as collapseable blocks.</p>
       <h3 id="highlightjs"><a href="https://highlightjs.org/" title="Highlight.js">Highlight.js</a></h3>
       <p>Syntax highlighting for javascript</p>
       <p>I chose to use this as it’s very easy to use and I wanted to highlight the codeblocks</p>
