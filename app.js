@@ -20,7 +20,8 @@ app.set('views', __dirname + '/templates');
 //Enable session cookies
 app.use(cookieSession({
   name: 'session',
-  keys: ['key1', 'key2']
+  keys: ['key1', 'key2'],
+  maxAge: 2592000000
 }));
 
 app.use(express.static('public'));
