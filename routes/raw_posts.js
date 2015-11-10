@@ -10,7 +10,7 @@ marked.setOptions({
   smartypants: true
 });
 
-var mjAPI = require("MathJax-node/lib/mj-page");
+var mjAPI = require("mathjax-node/lib/mj-page");
 var jsdom = require("jsdom").jsdom;
 
 mjAPI.config({
