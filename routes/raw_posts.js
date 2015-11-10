@@ -35,25 +35,30 @@ module.exports = function (app) {
 		noteRef = subjRef.child(nID);
 
 		noteRef.once("value", function (snap) {
-			noteMd = "<!DOCTYPE html><html lang='en'><head><title>Formatted Note</title><script src=\"//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script></head><body>";
-			noteMd += marked('# ' + snap.val().title + '\n \n' + snap.val().content);
-			noteMd += "</body></html>";
+			try {
+				noteMd = "<!DOCTYPE html><html lang='en'><head><title>Formatted Note</title><script src=\"//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\"></script></head><body>";
+				noteMd += marked('# ' + snap.val().title + '\n \n' + snap.val().content);
+				noteMd += "</body></html>";
 
-			noteDcoument = jsdom(noteMd);
+				noteDcoument = jsdom(noteMd);
 
-			mjAPI.typeset({
-			  html: noteDcoument.body.innerHTML,
-			  renderer: "NativeMML",
-			  inputs: ["TeX"],
-			  xmlns: "mml"
-			}, function (result) {
-		  	"use strict";
-			  noteDcoument.body.innerHTML = result.html;
-			  var HTML = "<!DOCTYPE html>\n" + noteDcoument.documentElement.outerHTML.replace(/^(\n|\s)*/, "");
-		  	res.send(HTML);
-			});
+				mjAPI.typeset({
+				  html: noteDcoument.body.innerHTML,
+				  renderer: "NativeMML",
+				  inputs: ["TeX"],
+				  xmlns: "mml"
+				}, function (result) {
+			  	"use strict";
+				  noteDcoument.body.innerHTML = result.html;
+				  var HTML = "<!DOCTYPE html>\n" + noteDcoument.documentElement.outerHTML.replace(/^(\n|\s)*/, "");
+			  	res.send(HTML);
+				});
+			} catch (e) {
+				res.send("404 NOT FOUND");
+			}
 		}, function (errorObject) {
 		  console.log("The read failed: " + errorObject.code);
+		  res.send("404 NOT FOUND");
 		});
 	});
 
