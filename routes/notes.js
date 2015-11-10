@@ -24,24 +24,6 @@ module.exports = function (app) {
 		});
 	});
 
-	app.get('/md/:uid/:subject/:noteid', function (req, res) {
-		userID = req.params.uid;
-		subj = req.params.subject;
-		nID = req.params.noteid;
-
-		userRef = app.locals.fireref.child(userID);
-		notesRef = userRef.child('notes');
-		subjRef = notesRef.child(subj);
-		noteRef = subjRef.child(nID);
-
-		noteRef.once("value", function (snap) {
-			res.set('Content-Type', 'text/plain');
-			res.send('# ' + snap.val().title + '\n \n' + snap.val().content);
-		}, function (errorObject) {
-		  console.log("The read failed: " + errorObject.code);
-		});
-	});
-
 	app.get('/post-help', function (req, res) {
 		res.render('post-help.swig', { user: req.session.user, breadcrumb: [
 				{ name: 'Home' , url: '/' },
